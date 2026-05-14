@@ -1,0 +1,1345 @@
+[
+  {
+    "question": "What type of database is Azure SQL Database?",
+    "options": [
+      "Document database",
+      "Relational database",
+      "Graph database",
+      "Key-value store"
+    ],
+    "answer": "Relational database",
+    "explanation": "Azure SQL Database is a managed relational database service based on the SQL Server engine.",
+    "domain": "Identify considerations for relational data on Azure"
+  },
+  {
+    "question": "Which language is primarily used to query relational data?",
+    "options": [
+      "KQL",
+      "SPARQL",
+      "SQL",
+      "MDX"
+    ],
+    "answer": "SQL",
+    "explanation": "Structured Query Language (SQL) is the standard language for relational databases.",
+    "domain": "Identify considerations for relational data on Azure"
+  },
+  {
+    "question": "What is the main goal of normalization in relational databases?",
+    "options": [
+      "Increase duplicate data",
+      "Reduce redundancy and improve data integrity",
+      "Encrypt all columns",
+      "Avoid using primary keys"
+    ],
+    "answer": "Reduce redundancy and improve data integrity",
+    "explanation": "Normalization organizes data to minimize duplication and reduce anomalies.",
+    "domain": "Identify considerations for relational data on Azure"
+  },
+  {
+    "question": "Which normal form removes repeating groups in a table?",
+    "options": [
+      "First Normal Form",
+      "Second Normal Form",
+      "Third Normal Form",
+      "Boyce-Codd Normal Form"
+    ],
+    "answer": "First Normal Form",
+    "explanation": "1NF requires atomic values and no repeating groups.",
+    "domain": "Identify considerations for relational data on Azure"
+  },
+  {
+    "question": "Which SQL keyword removes duplicate rows from a result set?",
+    "options": [
+      "UNIQUE",
+      "DISTINCT",
+      "DIFFERENT",
+      "SEPARATE"
+    ],
+    "answer": "DISTINCT",
+    "explanation": "DISTINCT returns unique rows for the selected columns.",
+    "domain": "Identify considerations for relational data on Azure"
+  },
+  {
+    "question": "Which SQL function returns the highest value in a column?",
+    "options": [
+      "TOP",
+      "HIGH",
+      "MAX",
+      "UPPER"
+    ],
+    "answer": "MAX",
+    "explanation": "MAX returns the greatest value in the selected expression.",
+    "domain": "Identify considerations for relational data on Azure"
+  },
+  {
+    "question": "What is the purpose of a clustered index?",
+    "options": [
+      "Store table data physically in index order",
+      "Encrypt row data",
+      "Backup table data",
+      "Partition by region only"
+    ],
+    "answer": "Store table data physically in index order",
+    "explanation": "A clustered index defines the physical ordering of rows in many relational engines.",
+    "domain": "Identify considerations for relational data on Azure"
+  },
+  {
+    "question": "Which join returns all rows from the left table and matching rows from the right table?",
+    "options": [
+      "INNER JOIN",
+      "LEFT JOIN",
+      "RIGHT JOIN",
+      "CROSS JOIN"
+    ],
+    "answer": "LEFT JOIN",
+    "explanation": "LEFT JOIN preserves all rows from the left side and fills missing right-side columns with nulls.",
+    "domain": "Identify considerations for relational data on Azure"
+  },
+  {
+    "question": "What does a CROSS JOIN return?",
+    "options": [
+      "Only matching rows",
+      "A Cartesian product of both tables",
+      "Rows with null keys only",
+      "Distinct keys only"
+    ],
+    "answer": "A Cartesian product of both tables",
+    "explanation": "CROSS JOIN pairs each row from one table with every row of the other.",
+    "domain": "Identify considerations for relational data on Azure"
+  },
+  {
+    "question": "What is a surrogate key in dimensional modeling?",
+    "options": [
+      "A natural business key",
+      "A system-generated unique identifier",
+      "A foreign key to fact table",
+      "An encrypted hash only"
+    ],
+    "answer": "A system-generated unique identifier",
+    "explanation": "Surrogate keys are artificial keys commonly used in dimensions for stability and performance.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "Which table in a star schema usually grows fastest?",
+    "options": [
+      "Date dimension",
+      "Fact table",
+      "Customer dimension",
+      "Product dimension"
+    ],
+    "answer": "Fact table",
+    "explanation": "Fact tables contain transactional or event-level records and typically have the highest row counts.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "What is a slowly changing dimension (SCD)?",
+    "options": [
+      "A fact table with low insert rate",
+      "A dimension where attribute values can change over time",
+      "A view refreshed monthly",
+      "A backup table"
+    ],
+    "answer": "A dimension where attribute values can change over time",
+    "explanation": "SCD techniques track historical changes in dimensional attributes.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "Which SCD type typically creates a new row to preserve history?",
+    "options": [
+      "Type 1",
+      "Type 2",
+      "Type 0",
+      "Type 4 only"
+    ],
+    "answer": "Type 2",
+    "explanation": "Type 2 SCD keeps full history by inserting a new versioned row.",
+    "domain": "Describe core data concepts"
+  },
+  {
+    "question": "What is the key purpose of Azure Data Factory linked services?",
+    "options": [
+      "Define connection information to data stores and compute",
+      "Render dashboards",
+      "Store row-level metadata only",
+      "Replace integration runtimes"
+    ],
+    "answer": "Define connection information to data stores and compute",
+    "explanation": "Linked services define connection details used by ADF pipelines and activities.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "In Azure Data Factory, what does a dataset represent?",
+    "options": [
+      "Pipeline schedule",
+      "Named view of data within a data store",
+      "User access policy",
+      "Compute node cluster"
+    ],
+    "answer": "Named view of data within a data store",
+    "explanation": "Datasets point to structured data used as inputs and outputs in activities.",
+    "domain": "Describe core data concepts"
+  },
+  {
+    "question": "What is a trigger in Azure Data Factory?",
+    "options": [
+      "A way to execute SQL joins",
+      "A mechanism to start pipelines on schedule or events",
+      "A storage redundancy option",
+      "A row-level security rule"
+    ],
+    "answer": "A mechanism to start pipelines on schedule or events",
+    "explanation": "Triggers automate pipeline execution based on time or event conditions.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "Which Azure service is used to discover and classify data sources for governance at enterprise scale?",
+    "options": [
+      "Microsoft Purview",
+      "Azure Bastion",
+      "Azure SignalR",
+      "Azure Policy"
+    ],
+    "answer": "Microsoft Purview",
+    "explanation": "Microsoft Purview provides data catalog, lineage, and governance capabilities.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "What is data lineage?",
+    "options": [
+      "A storage replication mode",
+      "Tracking data origin, movement, and transformations",
+      "A SQL backup method",
+      "A network routing rule"
+    ],
+    "answer": "Tracking data origin, movement, and transformations",
+    "explanation": "Lineage helps teams understand where data came from and how it changed.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "Which Azure service provides distributed processing with Apache Spark in managed workspaces?",
+    "options": [
+      "Azure Databricks",
+      "Azure Firewall",
+      "Azure API Management",
+      "Azure Load Balancer"
+    ],
+    "answer": "Azure Databricks",
+    "explanation": "Azure Databricks is an optimized Spark platform for data engineering and analytics.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "What is a notebook in data engineering contexts?",
+    "options": [
+      "A static PDF report",
+      "An interactive document with code, output, and notes",
+      "A database index structure",
+      "A backup schedule"
+    ],
+    "answer": "An interactive document with code, output, and notes",
+    "explanation": "Notebooks combine executable cells, visuals, and commentary in one place.",
+    "domain": "Identify considerations for relational data on Azure"
+  },
+  {
+    "question": "Which file format stores data as lightweight text commonly used in APIs?",
+    "options": [
+      "Parquet",
+      "ORC",
+      "JSON",
+      "Avro schema only"
+    ],
+    "answer": "JSON",
+    "explanation": "JSON is a human-readable text format widely used for semi-structured data exchange.",
+    "domain": "Describe considerations for working with non-relational data on Azure"
+  },
+  {
+    "question": "Which SQL clause limits the number of rows returned in SQL Server style syntax?",
+    "options": [
+      "LIMIT",
+      "TOP",
+      "FIRST",
+      "HEAD"
+    ],
+    "answer": "TOP",
+    "explanation": "TOP is used in T-SQL to restrict result set size.",
+    "domain": "Identify considerations for relational data on Azure"
+  },
+  {
+    "question": "What is the purpose of a WHERE clause?",
+    "options": [
+      "Sort rows",
+      "Filter rows before grouping",
+      "Rename columns",
+      "Join tables"
+    ],
+    "answer": "Filter rows before grouping",
+    "explanation": "WHERE applies row-level filtering prior to grouping and aggregation.",
+    "domain": "Describe core data concepts"
+  },
+  {
+    "question": "Which role does ORDER BY play in query execution results?",
+    "options": [
+      "Filters null values",
+      "Controls output sort order",
+      "Combines tables",
+      "Creates indexes"
+    ],
+    "answer": "Controls output sort order",
+    "explanation": "ORDER BY sorts the final query output.",
+    "domain": "Describe core data concepts"
+  },
+  {
+    "question": "What is a view in a relational database?",
+    "options": [
+      "A physical copy of data by default",
+      "A virtual table based on a query",
+      "A backup file format",
+      "A schema migration tool"
+    ],
+    "answer": "A virtual table based on a query",
+    "explanation": "Views encapsulate query logic and present it like a table.",
+    "domain": "Identify considerations for relational data on Azure"
+  },
+  {
+    "question": "What is one key difference between lakehouse and traditional warehouse patterns?",
+    "options": [
+      "Lakehouse combines data lake flexibility with warehouse performance features",
+      "Warehouse only supports SQL",
+      "Lakehouse cannot store files",
+      "Warehouse has no governance"
+    ],
+    "answer": "Lakehouse combines data lake flexibility with warehouse performance features",
+    "explanation": "Lakehouse architectures unify open-format storage with analytical optimization.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "Which Azure service can run SQL-like queries over log and telemetry data?",
+    "options": [
+      "Azure Data Explorer",
+      "Azure DNS",
+      "Azure Purview Scanner",
+      "Azure Site Recovery"
+    ],
+    "answer": "Azure Data Explorer",
+    "explanation": "Azure Data Explorer supports fast exploratory analytics over high-volume telemetry data.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "What does high availability in database services aim to provide?",
+    "options": [
+      "Cheaper storage only",
+      "Continued service during failures",
+      "Unlimited throughput always",
+      "No security controls"
+    ],
+    "answer": "Continued service during failures",
+    "explanation": "High availability architectures minimize downtime when infrastructure faults occur.",
+    "domain": "Describe core data concepts"
+  },
+  {
+    "question": "Which backup strategy objective measures acceptable data loss in time?",
+    "options": [
+      "RTO",
+      "RPO",
+      "SLA",
+      "MTTR"
+    ],
+    "answer": "RPO",
+    "explanation": "Recovery Point Objective defines the maximum tolerable data loss window.",
+    "domain": "Identify considerations for relational data on Azure"
+  },
+  {
+    "question": "Which recovery objective measures acceptable time to restore service?",
+    "options": [
+      "RTO",
+      "RPO",
+      "KPI",
+      "TTL"
+    ],
+    "answer": "RTO",
+    "explanation": "Recovery Time Objective defines how quickly services should be restored.",
+    "domain": "Identify considerations for relational data on Azure"
+  },
+  {
+    "question": "What is a common reason to use read replicas?",
+    "options": [
+      "Increase write throughput directly",
+      "Offload read traffic from primary database",
+      "Disable backups",
+      "Replace data encryption"
+    ],
+    "answer": "Offload read traffic from primary database",
+    "explanation": "Read replicas improve scale for read-heavy workloads without impacting primary writes.",
+    "domain": "Describe core data concepts"
+  },
+  {
+    "question": "Which encryption approach protects data while stored on disk?",
+    "options": [
+      "Encryption at rest",
+      "Encryption in transit",
+      "Hash partitioning",
+      "Data masking"
+    ],
+    "answer": "Encryption at rest",
+    "explanation": "Encryption at rest secures persisted data on storage media.",
+    "domain": "Describe core data concepts"
+  },
+  {
+    "question": "Which encryption approach protects data moving across networks?",
+    "options": [
+      "Encryption in transit",
+      "Encryption at rest",
+      "Physical partitioning",
+      "Row compression"
+    ],
+    "answer": "Encryption in transit",
+    "explanation": "Transport encryption (for example TLS) secures data between clients and services.",
+    "domain": "Describe core data concepts"
+  },
+  {
+    "question": "What is role-based access control in Azure primarily used for?",
+    "options": [
+      "Scheduling ETL jobs",
+      "Granting least-privilege access to resources",
+      "Creating dashboards",
+      "Compressing files"
+    ],
+    "answer": "Granting least-privilege access to resources",
+    "explanation": "Azure RBAC assigns scoped permissions to users, groups, and identities.",
+    "domain": "Describe core data concepts"
+  },
+  {
+    "question": "What is the purpose of row-level security in analytical or relational systems?",
+    "options": [
+      "Control data visibility by user or role",
+      "Increase index fragmentation",
+      "Lower storage cost",
+      "Convert data formats"
+    ],
+    "answer": "Control data visibility by user or role",
+    "explanation": "Row-level security filters rows based on identity or role context.",
+    "domain": "Identify considerations for relational data on Azure"
+  },
+  {
+    "question": "What does data skew mean in distributed systems?",
+    "options": [
+      "Even data distribution",
+      "Uneven data distribution causing hotspots",
+      "Encrypted partitions",
+      "Randomized key assignment"
+    ],
+    "answer": "Uneven data distribution causing hotspots",
+    "explanation": "Skew can degrade performance when some partitions receive disproportionate workload.",
+    "domain": "Describe core data concepts"
+  },
+  {
+    "question": "Why are cardinality estimates important for query optimization?",
+    "options": [
+      "They determine UI themes",
+      "They help choose efficient query execution plans",
+      "They enforce primary keys",
+      "They replace statistics updates"
+    ],
+    "answer": "They help choose efficient query execution plans",
+    "explanation": "Optimizers rely on row count estimates to select join and scan strategies.",
+    "domain": "Identify considerations for relational data on Azure"
+  },
+  {
+    "question": "Which Azure service is commonly used for orchestrating data workflows and integrating many connectors?",
+    "options": [
+      "Azure Data Factory",
+      "Azure Functions Core Tools",
+      "Azure Migrate",
+      "Azure Arc"
+    ],
+    "answer": "Azure Data Factory",
+    "explanation": "ADF provides broad connector support and orchestration features for data movement.",
+    "domain": "Describe core data concepts"
+  },
+  {
+    "question": "What is a sink in data pipeline terminology?",
+    "options": [
+      "The destination where data is written",
+      "The source where data is read",
+      "A schema validation error",
+      "A backup retention policy"
+    ],
+    "answer": "The destination where data is written",
+    "explanation": "Pipelines read from sources and write transformed output to sinks.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "What is a source in data pipeline terminology?",
+    "options": [
+      "The destination for final reports",
+      "The origin from which data is read",
+      "A deleted table",
+      "A role assignment"
+    ],
+    "answer": "The origin from which data is read",
+    "explanation": "Source systems provide input data for ingestion and transformation.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "What does batch processing mean?",
+    "options": [
+      "Processing data in scheduled chunks",
+      "Only real-time processing",
+      "Manual processing only",
+      "Processing one row every hour"
+    ],
+    "answer": "Processing data in scheduled chunks",
+    "explanation": "Batch workloads process accumulated data at intervals.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "What does stream processing mean?",
+    "options": [
+      "Storing files without processing",
+      "Processing events continuously or near real-time",
+      "Running yearly reports only",
+      "Compressing backups"
+    ],
+    "answer": "Processing events continuously or near real-time",
+    "explanation": "Stream processing analyzes events as they arrive with low latency.",
+    "domain": "Describe considerations for working with non-relational data on Azure"
+  },
+  {
+    "question": "What is one reason to use partition pruning?",
+    "options": [
+      "Force full table scans",
+      "Read only relevant partitions to reduce IO",
+      "Disable metadata",
+      "Increase duplicate storage"
+    ],
+    "answer": "Read only relevant partitions to reduce IO",
+    "explanation": "Partition pruning improves performance by skipping irrelevant data segments.",
+    "domain": "Describe core data concepts"
+  },
+  {
+    "question": "What is a semantic model in BI tools commonly used for?",
+    "options": [
+      "Network load balancing",
+      "Defining business-friendly metrics and relationships",
+      "Replacing ETL pipelines",
+      "Disabling data refresh"
+    ],
+    "answer": "Defining business-friendly metrics and relationships",
+    "explanation": "Semantic models organize curated tables, measures, and relationships for reporting.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "Why is data quality profiling useful before analytics?",
+    "options": [
+      "It guarantees perfect predictions",
+      "It reveals nulls, duplicates, and anomalies",
+      "It eliminates governance needs",
+      "It encrypts reports"
+    ],
+    "answer": "It reveals nulls, duplicates, and anomalies",
+    "explanation": "Profiling surfaces issues early so transformations can improve trust in results.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "What is one common purpose of a staging area in ETL?",
+    "options": [
+      "Store temporary intermediate data",
+      "Host production dashboards",
+      "Run firewall rules",
+      "Manage user passwords"
+    ],
+    "answer": "Store temporary intermediate data",
+    "explanation": "Staging areas hold raw or partially transformed data before final loading.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "Which operation is commonly used to combine datasets vertically when columns align?",
+    "options": [
+      "JOIN",
+      "UNION ALL",
+      "PIVOT",
+      "INTERSECT"
+    ],
+    "answer": "UNION ALL",
+    "explanation": "UNION ALL appends rows from one result set to another without deduplication.",
+    "domain": "Describe core data concepts"
+  },
+  {
+    "question": "What is one benefit of incremental data loads compared with full reloads?",
+    "options": [
+      "Always simpler logic",
+      "Reduced processing time and cost",
+      "No metadata needed",
+      "No need for keys"
+    ],
+    "answer": "Reduced processing time and cost",
+    "explanation": "Incremental loading processes only changed data, improving efficiency.",
+    "domain": "Describe core data concepts"
+  },
+  {
+    "question": "What is CDC in data engineering?",
+    "options": [
+      "Change Data Capture",
+      "Central Data Compression",
+      "Cloud Distribution Channel",
+      "Column Data Cleaning"
+    ],
+    "answer": "Change Data Capture",
+    "explanation": "CDC detects inserts, updates, and deletes for efficient downstream synchronization.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "Which Azure feature helps store secrets like connection strings securely?",
+    "options": [
+      "Azure Key Vault",
+      "Azure Queue Storage",
+      "Azure Policy Guest Config",
+      "Azure App Configuration snapshots only"
+    ],
+    "answer": "Azure Key Vault",
+    "explanation": "Key Vault securely stores and controls access to secrets, keys, and certificates.",
+    "domain": "Describe core data concepts"
+  },
+  {
+    "question": "In Azure SQL Database, what can automatic tuning help with?",
+    "options": [
+      "Automatically scaling all app code",
+      "Improving performance via index and plan recommendations",
+      "Encrypting every data export",
+      "Replacing data models"
+    ],
+    "answer": "Improving performance via index and plan recommendations",
+    "explanation": "Automatic tuning can apply and verify performance-oriented tuning actions.",
+    "domain": "Identify considerations for relational data on Azure"
+  },
+  {
+    "question": "Which SQL object can encapsulate reusable parameterized query logic on the server?",
+    "options": [
+      "Stored procedure",
+      "CSV file",
+      "Dataflow",
+      "Blob container"
+    ],
+    "answer": "Stored procedure",
+    "explanation": "Stored procedures package SQL logic that can accept parameters and be reused.",
+    "domain": "Identify considerations for relational data on Azure"
+  },
+  {
+    "question": "What is cardinality in data modeling?",
+    "options": [
+      "Compression ratio only",
+      "The uniqueness or relationship count between values",
+      "A security permission level",
+      "A backup frequency"
+    ],
+    "answer": "The uniqueness or relationship count between values",
+    "explanation": "Cardinality describes how values relate, such as one-to-many or many-to-many patterns.",
+    "domain": "Describe core data concepts"
+  },
+  {
+    "question": "Which statement best describes a many-to-many relationship?",
+    "options": [
+      "One row in table A matches one row in table B",
+      "Many rows in each table can relate to many rows in the other",
+      "Rows cannot be related",
+      "Only nulls can be related"
+    ],
+    "answer": "Many rows in each table can relate to many rows in the other",
+    "explanation": "Many-to-many relationships often require an associative bridge table in relational models.",
+    "domain": "Identify considerations for relational data on Azure"
+  },
+  {
+    "question": "What is the purpose of an associative table in relational design?",
+    "options": [
+      "Store backup binaries",
+      "Resolve many-to-many relationships",
+      "Encrypt row data",
+      "Schedule index rebuilds"
+    ],
+    "answer": "Resolve many-to-many relationships",
+    "explanation": "Associative tables map keys between entities to model many-to-many relationships.",
+    "domain": "Identify considerations for relational data on Azure"
+  },
+  {
+    "question": "Which metric most directly reflects quiz answer correctness in a study app?",
+    "options": [
+      "Average latency",
+      "Score percentage",
+      "CPU utilization",
+      "Network throughput"
+    ],
+    "answer": "Score percentage",
+    "explanation": "Score percentage indicates how many answers were correct out of total attempted questions.",
+    "domain": "Describe core data concepts"
+  },
+  {
+    "question": "In a relational model, what does a primary key do?",
+    "options": [
+      "Encrypts row data",
+      "Uniquely identifies each row",
+      "Sorts rows automatically",
+      "Creates table backups"
+    ],
+    "answer": "Uniquely identifies each row",
+    "explanation": "A primary key enforces uniqueness and identifies each record in a table.",
+    "domain": "Identify considerations for relational data on Azure"
+  },
+  {
+    "question": "Which Azure service is best for globally distributed NoSQL document data?",
+    "options": [
+      "Azure SQL Database",
+      "Azure Cosmos DB",
+      "Azure Data Factory",
+      "Azure Synapse Analytics"
+    ],
+    "answer": "Azure Cosmos DB",
+    "explanation": "Azure Cosmos DB is a globally distributed, low-latency NoSQL database service.",
+    "domain": "Describe considerations for working with non-relational data on Azure"
+  },
+  {
+    "question": "Which Azure Cosmos DB API is used for MongoDB workloads?",
+    "options": [
+      "API for Cassandra",
+      "API for Gremlin",
+      "API for MongoDB",
+      "Table API"
+    ],
+    "answer": "API for MongoDB",
+    "explanation": "The API for MongoDB provides wire-protocol compatibility with MongoDB applications.",
+    "domain": "Describe considerations for working with non-relational data on Azure"
+  },
+  {
+    "question": "What is a data warehouse mainly optimized for?",
+    "options": [
+      "High-frequency transactions",
+      "Analytical queries on large historical datasets",
+      "Mobile app hosting",
+      "Real-time gaming"
+    ],
+    "answer": "Analytical queries on large historical datasets",
+    "explanation": "Data warehouses support OLAP-style analytics across large, integrated datasets.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "Which workload pattern is OLTP designed for?",
+    "options": [
+      "Batch analytics",
+      "Frequent short insert/update/delete transactions",
+      "Machine learning model training",
+      "Data visualization only"
+    ],
+    "answer": "Frequent short insert/update/delete transactions",
+    "explanation": "OLTP systems are optimized for high-throughput transactional operations.",
+    "domain": "Identify considerations for relational data on Azure"
+  },
+  {
+    "question": "Which workload pattern is OLAP designed for?",
+    "options": [
+      "Point-in-time transaction recording",
+      "Large-scale aggregations and reporting",
+      "DNS query processing",
+      "IoT device firmware updates"
+    ],
+    "answer": "Large-scale aggregations and reporting",
+    "explanation": "OLAP systems focus on read-heavy analytical processing and complex queries.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "In Azure, which service is commonly used to orchestrate ETL/ELT pipelines?",
+    "options": [
+      "Azure Data Factory",
+      "Azure DNS",
+      "Azure Front Door",
+      "Azure Bastion"
+    ],
+    "answer": "Azure Data Factory",
+    "explanation": "Azure Data Factory provides pipeline orchestration, scheduling, and data movement.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "What is a key benefit of partitioning in large datasets?",
+    "options": [
+      "It removes the need for indexes",
+      "It can improve query performance and manageability",
+      "It guarantees zero latency",
+      "It converts NoSQL to SQL"
+    ],
+    "answer": "It can improve query performance and manageability",
+    "explanation": "Partitioning reduces data scanned per query and helps scale storage and processing.",
+    "domain": "Describe core data concepts"
+  },
+  {
+    "question": "Which Azure storage type is most suitable for unstructured objects like images and videos?",
+    "options": [
+      "Azure Files",
+      "Azure Blob Storage",
+      "Azure Queue Storage",
+      "Azure Table Storage"
+    ],
+    "answer": "Azure Blob Storage",
+    "explanation": "Blob Storage is designed for massive amounts of unstructured object data.",
+    "domain": "Describe considerations for working with non-relational data on Azure"
+  },
+  {
+    "question": "What does ACID refer to in databases?",
+    "options": [
+      "A cloud deployment model",
+      "A set of transaction reliability properties",
+      "A data compression standard",
+      "A network security protocol"
+    ],
+    "answer": "A set of transaction reliability properties",
+    "explanation": "ACID stands for Atomicity, Consistency, Isolation, and Durability.",
+    "domain": "Identify considerations for relational data on Azure"
+  },
+  {
+    "question": "Which index type is best for speeding up equality lookups in relational systems?",
+    "options": [
+      "B-tree based index",
+      "Bitmap image",
+      "Full data copy",
+      "Archive tier"
+    ],
+    "answer": "B-tree based index",
+    "explanation": "B-tree indexes are commonly used for efficient point and range lookups.",
+    "domain": "Identify considerations for relational data on Azure"
+  },
+  {
+    "question": "What is denormalization typically used for?",
+    "options": [
+      "Reducing storage capacity",
+      "Improving read performance by reducing joins",
+      "Encrypting sensitive columns",
+      "Scheduling batch jobs"
+    ],
+    "answer": "Improving read performance by reducing joins",
+    "explanation": "Denormalization duplicates selected data to accelerate read-heavy queries.",
+    "domain": "Describe core data concepts"
+  },
+  {
+    "question": "Which Azure service provides a petabyte-scale analytics platform combining SQL and Spark?",
+    "options": [
+      "Azure Synapse Analytics",
+      "Azure Virtual Desktop",
+      "Azure Container Apps",
+      "Azure Logic Apps"
+    ],
+    "answer": "Azure Synapse Analytics",
+    "explanation": "Azure Synapse unifies enterprise data warehousing and big data analytics.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "In star schema design, what does the fact table usually store?",
+    "options": [
+      "Only user permissions",
+      "Business events and numeric measures",
+      "Only lookup descriptions",
+      "Backup metadata"
+    ],
+    "answer": "Business events and numeric measures",
+    "explanation": "Fact tables store measurements tied to dimension keys for analysis.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "In star schema design, what is the role of dimension tables?",
+    "options": [
+      "Store only transaction logs",
+      "Describe business entities such as customer or date",
+      "Execute ETL code",
+      "Replace fact tables"
+    ],
+    "answer": "Describe business entities such as customer or date",
+    "explanation": "Dimension tables provide descriptive context for facts in analytical models.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "What is the main purpose of a data lake?",
+    "options": [
+      "Serve transactional banking workloads only",
+      "Store large volumes of raw and varied data",
+      "Host DNS zones",
+      "Replace all BI tools"
+    ],
+    "answer": "Store large volumes of raw and varied data",
+    "explanation": "Data lakes support structured, semi-structured, and unstructured data at scale.",
+    "domain": "Describe considerations for working with non-relational data on Azure"
+  },
+  {
+    "question": "Which Azure service underpins many data lake implementations?",
+    "options": [
+      "Azure Data Lake Storage Gen2",
+      "Azure DevOps",
+      "Azure Key Vault",
+      "Azure Firewall"
+    ],
+    "answer": "Azure Data Lake Storage Gen2",
+    "explanation": "ADLS Gen2 adds hierarchical namespace and analytics-focused capabilities to Blob Storage.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "What is schema-on-read?",
+    "options": [
+      "Data is forced into schema before storage",
+      "Schema is applied when data is queried",
+      "Schema is never required",
+      "Schema is encrypted"
+    ],
+    "answer": "Schema is applied when data is queried",
+    "explanation": "Schema-on-read allows storing raw data first, then interpreting structure at query time.",
+    "domain": "Identify considerations for relational data on Azure"
+  },
+  {
+    "question": "What is schema-on-write?",
+    "options": [
+      "Data structure is enforced before or during load",
+      "Schema is applied only in dashboards",
+      "Schema is optional for OLTP",
+      "Schema exists only in source control"
+    ],
+    "answer": "Data structure is enforced before or during load",
+    "explanation": "Schema-on-write validates and transforms data before it is stored for querying.",
+    "domain": "Identify considerations for relational data on Azure"
+  },
+  {
+    "question": "Which Azure service is commonly used for real-time event ingestion at scale?",
+    "options": [
+      "Azure Event Hubs",
+      "Azure Automation",
+      "Azure App Service",
+      "Azure Monitor"
+    ],
+    "answer": "Azure Event Hubs",
+    "explanation": "Event Hubs is a high-throughput streaming ingestion service.",
+    "domain": "Describe considerations for working with non-relational data on Azure"
+  },
+  {
+    "question": "What is a common use case for Azure Stream Analytics?",
+    "options": [
+      "Interactive game hosting",
+      "Real-time stream processing and analytics",
+      "Static website theming",
+      "VM patch management"
+    ],
+    "answer": "Real-time stream processing and analytics",
+    "explanation": "Azure Stream Analytics processes data streams with near real-time query logic.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "Which consistency level in Azure Cosmos DB provides strongest guarantees?",
+    "options": [
+      "Eventual",
+      "Consistent Prefix",
+      "Session",
+      "Strong"
+    ],
+    "answer": "Strong",
+    "explanation": "Strong consistency guarantees linearizability with the latest committed writes.",
+    "domain": "Describe considerations for working with non-relational data on Azure"
+  },
+  {
+    "question": "Why is choosing a good partition key important in Azure Cosmos DB?",
+    "options": [
+      "It controls UI theme",
+      "It affects data distribution and scalability",
+      "It disables indexing",
+      "It sets backup schedule"
+    ],
+    "answer": "It affects data distribution and scalability",
+    "explanation": "A well-chosen partition key prevents hot partitions and improves throughput usage.",
+    "domain": "Describe considerations for working with non-relational data on Azure"
+  },
+  {
+    "question": "What does RU/s represent in Azure Cosmos DB?",
+    "options": [
+      "Read Units per second",
+      "Request Units per second",
+      "Resource Usage snapshots",
+      "Replication Updates per shard"
+    ],
+    "answer": "Request Units per second",
+    "explanation": "RU/s is the normalized throughput currency for operations in Cosmos DB.",
+    "domain": "Describe considerations for working with non-relational data on Azure"
+  },
+  {
+    "question": "Which SQL statement is used to combine rows from two tables based on a related column?",
+    "options": [
+      "JOIN",
+      "MERGEFILE",
+      "ATTACH",
+      "UNIONALLTABLE"
+    ],
+    "answer": "JOIN",
+    "explanation": "JOIN combines related data from multiple tables using matching keys.",
+    "domain": "Identify considerations for relational data on Azure"
+  },
+  {
+    "question": "Which SQL clause filters grouped results after aggregation?",
+    "options": [
+      "WHERE",
+      "HAVING",
+      "ORDER BY",
+      "TOP"
+    ],
+    "answer": "HAVING",
+    "explanation": "HAVING filters groups after GROUP BY and aggregate functions are applied.",
+    "domain": "Identify considerations for relational data on Azure"
+  },
+  {
+    "question": "Which SQL aggregate function returns the number of rows?",
+    "options": [
+      "SUM",
+      "COUNT",
+      "AVG",
+      "MIN"
+    ],
+    "answer": "COUNT",
+    "explanation": "COUNT returns how many rows or non-null values match the query.",
+    "domain": "Identify considerations for relational data on Azure"
+  },
+  {
+    "question": "What is the purpose of a foreign key in relational databases?",
+    "options": [
+      "Compress table storage",
+      "Enforce referential integrity between tables",
+      "Create backups automatically",
+      "Encrypt primary keys"
+    ],
+    "answer": "Enforce referential integrity between tables",
+    "explanation": "Foreign keys ensure related records exist and maintain consistent relationships.",
+    "domain": "Identify considerations for relational data on Azure"
+  },
+  {
+    "question": "Which Azure database option is best when you need compatibility with SQL Server features and minimal management?",
+    "options": [
+      "Azure SQL Database",
+      "Azure Cosmos DB",
+      "Azure Cache for Redis",
+      "Azure Data Explorer"
+    ],
+    "answer": "Azure SQL Database",
+    "explanation": "Azure SQL Database offers managed SQL Server capabilities with reduced admin overhead.",
+    "domain": "Identify considerations for relational data on Azure"
+  },
+  {
+    "question": "Which Azure service is best for fully managed PostgreSQL?",
+    "options": [
+      "Azure Database for PostgreSQL",
+      "Azure SQL Managed Instance",
+      "Azure Synapse Serverless",
+      "Azure Analysis Services"
+    ],
+    "answer": "Azure Database for PostgreSQL",
+    "explanation": "Azure Database for PostgreSQL provides managed PostgreSQL deployments.",
+    "domain": "Identify considerations for relational data on Azure"
+  },
+  {
+    "question": "What is data redundancy in storage mainly used for?",
+    "options": [
+      "Reducing logical schema complexity",
+      "Improving durability and availability",
+      "Avoiding data governance",
+      "Replacing backups entirely"
+    ],
+    "answer": "Improving durability and availability",
+    "explanation": "Redundancy replicates data across locations to protect against failures.",
+    "domain": "Describe core data concepts"
+  },
+  {
+    "question": "Which Azure Blob access tier is optimized for infrequently accessed data with long retention?",
+    "options": [
+      "Hot",
+      "Cool",
+      "Archive",
+      "Premium"
+    ],
+    "answer": "Archive",
+    "explanation": "Archive tier offers the lowest storage cost for rarely accessed data with retrieval delay.",
+    "domain": "Describe considerations for working with non-relational data on Azure"
+  },
+  {
+    "question": "What is the primary purpose of data visualization tools like Power BI?",
+    "options": [
+      "Replace all source databases",
+      "Communicate insights through dashboards and reports",
+      "Perform only ETL orchestration",
+      "Encrypt network traffic"
+    ],
+    "answer": "Communicate insights through dashboards and reports",
+    "explanation": "Visualization helps stakeholders understand trends, KPIs, and outcomes quickly.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "In analytics, what is a KPI?",
+    "options": [
+      "Key Process Integration",
+      "Key Performance Indicator",
+      "Known Pipeline Issue",
+      "Kernel Performance Input"
+    ],
+    "answer": "Key Performance Indicator",
+    "explanation": "A KPI is a measurable value used to track performance against objectives.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "Which transformation operation reshapes rows into columns in data prep workflows?",
+    "options": [
+      "Pivot",
+      "Sort",
+      "Filter",
+      "Split"
+    ],
+    "answer": "Pivot",
+    "explanation": "Pivot transforms distinct row values into columns for analysis.",
+    "domain": "Describe core data concepts"
+  },
+  {
+    "question": "Which transformation operation converts columns into attribute-value rows?",
+    "options": [
+      "Merge",
+      "Unpivot",
+      "Deduplicate",
+      "Group"
+    ],
+    "answer": "Unpivot",
+    "explanation": "Unpivot normalizes wide tables by turning columns into rows.",
+    "domain": "Identify considerations for relational data on Azure"
+  },
+  {
+    "question": "What is the purpose of deduplication in data quality processes?",
+    "options": [
+      "Increase row counts",
+      "Remove duplicate records",
+      "Encrypt duplicate values",
+      "Generate synthetic data"
+    ],
+    "answer": "Remove duplicate records",
+    "explanation": "Deduplication improves quality by eliminating repeated records.",
+    "domain": "Describe core data concepts"
+  },
+  {
+    "question": "What is one benefit of using managed Azure data services?",
+    "options": [
+      "No internet required",
+      "Reduced administrative overhead",
+      "Unlimited free compute",
+      "No security controls needed"
+    ],
+    "answer": "Reduced administrative overhead",
+    "explanation": "Managed services reduce patching, backups, and infrastructure maintenance effort.",
+    "domain": "Describe core data concepts"
+  },
+  {
+    "question": "Which Azure Synapse option lets you query data in the lake without provisioning dedicated SQL resources?",
+    "options": [
+      "Dedicated SQL pool",
+      "Serverless SQL pool",
+      "Integration Runtime",
+      "Sparkless runtime"
+    ],
+    "answer": "Serverless SQL pool",
+    "explanation": "Serverless SQL pool enables on-demand querying of files in data lake storage.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "What is a data pipeline?",
+    "options": [
+      "A firewall rule set",
+      "A sequence of steps to move and transform data",
+      "A physical network cable",
+      "A SQL-only stored procedure"
+    ],
+    "answer": "A sequence of steps to move and transform data",
+    "explanation": "Pipelines orchestrate ingestion, transformation, and loading processes.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "Which file format is columnar and often used for analytics in data lakes?",
+    "options": [
+      "TXT",
+      "Parquet",
+      "BMP",
+      "RTF"
+    ],
+    "answer": "Parquet",
+    "explanation": "Parquet is a columnar format that improves analytic query efficiency.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "What is the main advantage of columnar storage for analytics?",
+    "options": [
+      "Faster writes for all OLTP workloads",
+      "Efficient reads of selected columns and compression",
+      "Eliminates need for schemas",
+      "Always cheaper than object storage"
+    ],
+    "answer": "Efficient reads of selected columns and compression",
+    "explanation": "Columnar storage reads only needed columns and compresses similar data effectively.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "Which SQL operation returns only rows present in both query results?",
+    "options": [
+      "UNION",
+      "INTERSECT",
+      "EXCEPT",
+      "CROSS APPLY"
+    ],
+    "answer": "INTERSECT",
+    "explanation": "INTERSECT returns distinct rows shared by both result sets.",
+    "domain": "Identify considerations for relational data on Azure"
+  },
+  {
+    "question": "Which SQL clause is used to sort query results?",
+    "options": [
+      "GROUP BY",
+      "ORDER BY",
+      "SORT ON",
+      "RANK BY"
+    ],
+    "answer": "ORDER BY",
+    "explanation": "ORDER BY sorts rows by one or more columns ascending or descending.",
+    "domain": "Identify considerations for relational data on Azure"
+  },
+  {
+    "question": "What does ETL stand for?",
+    "options": [
+      "Extract, Transform, Load",
+      "Evaluate, Transfer, Link",
+      "Encode, Test, Launch",
+      "Expand, Trace, Limit"
+    ],
+    "answer": "Extract, Transform, Load",
+    "explanation": "ETL describes extracting source data, transforming it, and loading it into a target.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "What does ELT stand for?",
+    "options": [
+      "Extract, Load, Transform",
+      "Enable, Link, Transfer",
+      "Expand, Load, Tune",
+      "Extract, Label, Test"
+    ],
+    "answer": "Extract, Load, Transform",
+    "explanation": "ELT loads raw data first, then transforms it in the target platform.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "When is ELT often preferred over ETL?",
+    "options": [
+      "When target systems cannot scale",
+      "When using powerful cloud compute for in-platform transformations",
+      "When data must never be stored raw",
+      "When SQL is unavailable"
+    ],
+    "answer": "When using powerful cloud compute for in-platform transformations",
+    "explanation": "ELT leverages scalable compute in modern data platforms like warehouses and lakehouses.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "Which Azure service is commonly used to build interactive reports from curated datasets?",
+    "options": [
+      "Power BI",
+      "Azure Backup",
+      "Azure Load Testing",
+      "Azure VPN Gateway"
+    ],
+    "answer": "Power BI",
+    "explanation": "Power BI is Microsofts business intelligence platform for reports and dashboards.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "Which Azure service is designed for globally distributed NoSQL applications?",
+    "options": ["Azure Cosmos DB", "Azure SQL Database", "Azure Synapse Analytics", "Azure Data Factory"],
+    "answer": "Azure Cosmos DB",
+    "explanation": "Azure Cosmos DB is a globally distributed NoSQL database service for low-latency applications.",
+    "domain": "Describe considerations for working with non-relational data on Azure"
+  },
+  {
+    "question": "Which Azure service is commonly used to store files in a data lake?",
+    "options": ["Azure Blob Storage", "Azure Key Vault", "Azure Monitor", "Azure DNS"],
+    "answer": "Azure Blob Storage",
+    "explanation": "Azure Blob Storage and Azure Data Lake Storage Gen2 are commonly used for large-scale file storage.",
+    "domain": "Describe considerations for working with non-relational data on Azure"
+  },
+  {
+    "question": "What is the main difference between structured and semi-structured data?",
+    "options": [
+      "Structured data has a fixed schema, semi-structured data has flexible structure",
+      "Structured data cannot be queried",
+      "Semi-structured data only exists in SQL databases",
+      "Structured data is always images"
+    ],
+    "answer": "Structured data has a fixed schema, semi-structured data has flexible structure",
+    "explanation": "Structured data usually fits tables, while semi-structured data such as JSON has flexible fields.",
+    "domain": "Describe core data concepts"
+  },
+  {
+    "question": "Which example is semi-structured data?",
+    "options": ["JSON document", "SQL table", "Power BI card visual", "Clustered index"],
+    "answer": "JSON document",
+    "explanation": "JSON is semi-structured because it contains fields and values but does not require a strict relational schema.",
+    "domain": "Describe core data concepts"
+  },
+  {
+    "question": "Which workload is best described as transactional?",
+    "options": [
+      "Processing customer orders in real time",
+      "Analysing five years of sales history",
+      "Creating monthly dashboards",
+      "Training a forecasting model"
+    ],
+    "answer": "Processing customer orders in real time",
+    "explanation": "Transactional workloads handle frequent small operations such as inserts, updates, and deletes.",
+    "domain": "Identify considerations for relational data on Azure"
+  },
+  {
+    "question": "Which workload is best described as analytical?",
+    "options": [
+      "Running reports over historical data",
+      "Updating one customer address",
+      "Processing a single payment",
+      "Creating a user login record"
+    ],
+    "answer": "Running reports over historical data",
+    "explanation": "Analytical workloads focus on querying large datasets to find trends and insights.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "Which Azure service can query files in a data lake using serverless SQL?",
+    "options": ["Azure Synapse Analytics", "Azure App Service", "Azure Bastion", "Azure Key Vault"],
+    "answer": "Azure Synapse Analytics",
+    "explanation": "Synapse Serverless SQL can query files stored in a data lake without provisioning a dedicated SQL pool.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "What is Power BI mainly used for?",
+    "options": [
+      "Creating reports and dashboards",
+      "Replacing all databases",
+      "Managing virtual networks",
+      "Storing secrets"
+    ],
+    "answer": "Creating reports and dashboards",
+    "explanation": "Power BI is used to create interactive reports and dashboards from data sources.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "What is the purpose of Azure Data Factory?",
+    "options": [
+      "Orchestrating and moving data between systems",
+      "Creating virtual machines",
+      "Hosting websites",
+      "Managing user passwords"
+    ],
+    "answer": "Orchestrating and moving data between systems",
+    "explanation": "Azure Data Factory is used to create pipelines that move and transform data.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "Which Azure service is best suited for managed relational databases based on SQL Server?",
+    "options": ["Azure SQL Database", "Azure Cosmos DB", "Azure Blob Storage", "Azure Event Hubs"],
+    "answer": "Azure SQL Database",
+    "explanation": "Azure SQL Database is a managed relational database service based on SQL Server.",
+    "domain": "Identify considerations for relational data on Azure"
+  }
+]
