@@ -1249,14 +1249,24 @@
   },
   {
     "question": "Which Azure service is designed for globally distributed NoSQL applications?",
-    "options": ["Azure Cosmos DB", "Azure SQL Database", "Azure Synapse Analytics", "Azure Data Factory"],
+    "options": [
+      "Azure Cosmos DB",
+      "Azure SQL Database",
+      "Azure Synapse Analytics",
+      "Azure Data Factory"
+    ],
     "answer": "Azure Cosmos DB",
     "explanation": "Azure Cosmos DB is a globally distributed NoSQL database service for low-latency applications.",
     "domain": "Describe considerations for working with non-relational data on Azure"
   },
   {
     "question": "Which Azure service is commonly used to store files in a data lake?",
-    "options": ["Azure Blob Storage", "Azure Key Vault", "Azure Monitor", "Azure DNS"],
+    "options": [
+      "Azure Blob Storage",
+      "Azure Key Vault",
+      "Azure Monitor",
+      "Azure DNS"
+    ],
     "answer": "Azure Blob Storage",
     "explanation": "Azure Blob Storage and Azure Data Lake Storage Gen2 are commonly used for large-scale file storage.",
     "domain": "Describe considerations for working with non-relational data on Azure"
@@ -1275,7 +1285,12 @@
   },
   {
     "question": "Which example is semi-structured data?",
-    "options": ["JSON document", "SQL table", "Power BI card visual", "Clustered index"],
+    "options": [
+      "JSON document",
+      "SQL table",
+      "Power BI card visual",
+      "Clustered index"
+    ],
     "answer": "JSON document",
     "explanation": "JSON is semi-structured because it contains fields and values but does not require a strict relational schema.",
     "domain": "Describe core data concepts"
@@ -1306,7 +1321,12 @@
   },
   {
     "question": "Which Azure service can query files in a data lake using serverless SQL?",
-    "options": ["Azure Synapse Analytics", "Azure App Service", "Azure Bastion", "Azure Key Vault"],
+    "options": [
+      "Azure Synapse Analytics",
+      "Azure App Service",
+      "Azure Bastion",
+      "Azure Key Vault"
+    ],
     "answer": "Azure Synapse Analytics",
     "explanation": "Synapse Serverless SQL can query files stored in a data lake without provisioning a dedicated SQL pool.",
     "domain": "Describe an analytics workload on Azure"
@@ -1337,9 +1357,768 @@
   },
   {
     "question": "Which Azure service is best suited for managed relational databases based on SQL Server?",
-    "options": ["Azure SQL Database", "Azure Cosmos DB", "Azure Blob Storage", "Azure Event Hubs"],
+    "options": [
+      "Azure SQL Database",
+      "Azure Cosmos DB",
+      "Azure Blob Storage",
+      "Azure Event Hubs"
+    ],
     "answer": "Azure SQL Database",
     "explanation": "Azure SQL Database is a managed relational database service based on SQL Server.",
     "domain": "Identify considerations for relational data on Azure"
+  },
+  {
+    "question": "Which service is built on Apache Spark and is compatible with other cloud providers?",
+    "options": [
+      "Azure Databricks",
+      "Azure SQL Database",
+      "Azure Blob Storage",
+      "Azure Event Hubs"
+    ],
+    "answer": "Azure Databricks",
+    "explanation": "Azure Databricks is an Apache Spark-based analytics platform that is compatible with other cloud providers.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "Which two services allow you to pre-process a large volume of data by using Scala? Each correct answer presents a complete solution. Choose two.",
+    "options": [
+      "Azure Databricks",
+      "a serverless Apache Spark pool in Azure Synapse Analytics",
+      "Azure SQL Database",
+      "Azure Blob Storage"
+    ],
+    "answer": "Azure Databricks, a serverless Apache Spark pool in Azure Synapse Analytics",
+    "explanation": "Azure Databricks and Azure Synapse Analytics allow you to pre-process large volumes of data using Scala.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "You have an Azure Cosmos DB service running the SQL API. One of the operational databases has a lot of transactions. Which service allows you to perform near real-time analytics on the operational data stored in Azure Cosmos DB?",
+    "options": [
+      "Azure Synapse Link for Cosmos DB",
+      "Azure SQL Database",
+      "Azure Blob Storage",
+      "Azure Data Factory"
+    ],
+    "answer": "Azure Synapse Link for Cosmos DB",
+    "explanation": "Azure Synapse Link for Cosmos DB allows you to perform near real-time analytics on operational data stored in Azure Cosmos DB without impacting the performance of the transactional workloads.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "Which three actions can you perform directly from an Azure Databricks notebook? Each correct answer presents a complete solution. Choose three.",
+    "options": [
+      "Create a database.",
+      "Create a schema.",
+      "Create a table.",
+      "Create an additional notebook.",
+      "Run queries."
+    ],
+    "answer": "Create a database., Create a schema., Create a table.",
+    "explanation": "Azure Databricks notebooks allow you to create a database, create a schema, and create a table directly from the notebook interface.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "Which service can you use to perpetually retrieve data from a Kafka queue, process the data, and write the data to Azure Data Lake?",
+    "options": [
+      "Azure Stream Analytics",
+      "Azure Data Factory",
+      "Azure Databricks",
+      "Azure Event Hubs"
+    ],
+    "answer": "Azure Stream Analytics",
+    "explanation": "Azure Stream Analytics allows you to perpetually retrieve data from a Kafka queue, process the data, and write the data to Azure Data Lake.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "Which service allows you to perform on-demand analysis of large volumes of data from text logs, websites and IoT devices by using a common querying language for all the data sources?",
+    "options": [
+      "Azure Data Explorer",
+      "Azure SQL Database",
+      "Azure Blob Storage",
+      "Azure Event Hubs"
+    ],
+    "answer": "Azure Data Explorer",
+    "explanation": "Azure Data Explorer allows you to perform on-demand analysis of large volumes of data from text logs, websites, and IoT devices by using a common querying language for all the data sources.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "Which type of visual in Microsoft Power BI should you use to identify the correlation between two numeric measures?",
+    "options": [
+      "Scatter plots",
+      "Bar chart",
+      "Line chart",
+      "Pie chart"
+    ],
+    "answer": "Scatter plots",
+    "explanation": "A scatter chart in Power BI is used to identify the correlation between two numeric measures by plotting data points on a two-dimensional graph.",
+    "domain": "Visualize data in Power BI"
+  },
+  {
+    "question": "Which type of visual in Microsoft Power BI should you use to compare categorized values as the proportions of a total value?",
+    "options": [
+      "Pie chart",
+      "Bar chart",
+      "Line chart",
+      "Scatter plots"
+    ],
+    "answer": "Pie chart",
+    "explanation": "A pie chart in Power BI is used to compare categorized values as the proportions of a total value.",
+    "domain": "Visualize data in Power BI"
+  },
+  {
+    "question": "What should you use to define an analytical model for Microsoft Power BI?",
+    "options": [
+      "Power BI Desktop",
+      "Power BI Service",
+      "Power BI Report Server",
+      "Power BI Mobile"
+    ],
+    "answer": "Power BI Desktop",
+    "explanation": "Power BI Desktop is used to define an analytical model by creating data models, relationships, and calculations.",
+    "domain": "Visualize data in Power BI"
+  },
+  {
+    "question": "Which two visuals in Microsoft Power BI allow you to visually compare numeric values for discrete categories? Each correct answer presents a complete solution.",
+    "options": [
+      "Bar chart",
+      "Column chart",
+      "Line chart",
+      "Pie chart"
+    ],
+    "answer": "Bar chart, Column chart",
+    "explanation": "Bar charts and column charts in Power BI allow you to visually compare numeric values for discrete categories.",
+    "domain": "Visualize data in Power BI"
+  },
+  {
+    "question": "Which visual in Microsoft Power BI allows you to view trends, such as changes in sales over time?",
+    "options": [
+      "Line chart",
+      "Bar chart",
+      "Column chart",
+      "Pie chart"
+    ],
+    "answer": "Line chart",
+    "explanation": "A line chart in Power BI is used to view trends, such as changes in sales over time.",
+    "domain": "Visualize data in Power BI"
+  },
+  {
+    "question": "In the Power BI service, what should you create to share a single page with the most important visuals from reports?",
+    "options": [
+      "Dashboard",
+      "Report",
+      "Dataset",
+      "Workspace"
+    ],
+    "answer": "Dashboard",
+    "explanation": "In the Power BI service, you create a dashboard to share a single page with the most important visuals from reports.",
+    "domain": "Visualize data in Power BI"
+  },
+  {
+    "question": "You need to share a report that you created in Microsoft Power BI Desktop with other users. What should you do first?",
+    "options": [
+      "Publish the report to the Power BI service",
+      "Export the report as a PDF",
+      "Save the report to a shared network folder",
+      "Email the report as an attachment"
+    ],
+    "answer": "Publish the report to the Power BI service",
+    "explanation": "To share a report created in Power BI Desktop with other users, you should first publish it to the Power BI service.",
+    "domain": "Visualize data in Power BI"
+  },
+  {
+    "question": "Which type of visual in Microsoft Power BI should you use to display a single value, such total sales?",
+    "options": [
+      "Card",
+      "Bar chart",
+      "Line chart",
+      "Pie chart"
+    ],
+    "answer": "Card",
+    "explanation": "A card visual in Power BI is used to display a single value, such as total sales.",
+    "domain": "Visualize data in Power BI"
+  },
+  {
+    "question": "Which type of Azure Storage is used for VHDs and is optimized for random read and write operations?",
+    "options": [
+      "append blobs",
+      "Azure Files",
+      "block blob",
+      "page blob"
+    ],
+    "answer": "page blob",
+    "explanation": "Page blobs in Azure Storage are used for VHDs and are optimized for random read and write operations.",
+    "domain": "Azure Storage options and features"
+  },
+  {
+    "question": "Which type of Azure Storage is used to store large amounts of data that must be processed by services such as Azure Databricks, Azure Synapse Analytics, and Azure HDInsight?",
+    "options": [
+      "Azure Data Lake Storage Gen2",
+      "Azure Files",
+      "Azure Queue Storage",
+      "Azure Table Storage"
+    ],
+    "answer": "Azure Data Lake Storage Gen2",
+    "explanation": "Azure Data Lake Storage Gen2 is used to store large amounts of data that must be processed by services such as Azure Databricks, Azure Synapse Analytics, and Azure HDInsight.",
+    "domain": "Azure Storage options and features"
+  },
+  {
+    "question": "Which two storage solutions can be mounted in Azure Synapse Analytics and used to process large volumes of data? Each correct answer presents a complete solution. Choose two.",
+    "options": [
+      "Azure Data Lake Storage Gen2",
+      "Azure Blob Storage",
+      "Azure Files",
+      "Azure Table Storage"
+    ],
+    "answer": "Azure Data Lake Storage Gen2, Azure Blob Storage",
+    "explanation": "Azure Data Lake Storage Gen2 and Azure Blob Storage can be mounted in Azure Synapse Analytics and used to process large volumes of data.",
+    "domain": "Azure Storage options and features"
+  },
+  {
+    "question": "You need to replace an existing on-premises SMB shared folder with a cloud solution. Which storage option should you choose?",
+    "options": [
+      "Azure Files",
+      "Azure Blob Storage",
+      "Azure Data Lake Storage Gen2",
+      "Azure Table Storage"
+    ],
+    "answer": "Azure Files",
+    "explanation": "Azure Files provides fully managed file shares in the cloud that are accessible via the SMB protocol, making it a suitable replacement for on-premises SMB shared folders.",
+    "domain": "Azure Storage options and features"
+  },
+  {
+    "question": "Which Azure Blob Storage feature prevents blobs from being modified or deleted for a specified retention period?",
+    "options": [
+      "Immutable blob storage",
+      "Soft delete",
+      "Versioning",
+      "Snapshot"
+    ],
+    "answer": "Immutable blob storage",
+    "explanation": "Immutable blob storage in Azure Blob Storage prevents blobs from being modified or deleted for a specified retention period.",
+    "domain": "Azure Storage options and features"
+  },
+  {
+    "question": "Which Azure Cosmos DB API should you use for data in a graph structure?",
+    "options": [
+      "Apache Gremlin API",
+      "SQL API",
+      "MongoDB API",
+      "Apache Cassandra API"
+    ],
+    "answer": "Apache Gremlin API",
+    "explanation": "The Apache Gremlin API in Azure Cosmos DB is used for working with graph data structures.",
+    "domain": "Azure Cosmos DB APIs"
+  },
+  {
+    "question": "Which Azure Cosmos DB API should you use for data in a column-family storage structure?",
+    "options": [
+      "Apache Gremlin API",
+      "SQL API",
+      "MongoDB API",
+      "Apache Cassandra API"
+    ],
+    "answer": "Apache Cassandra API",
+    "explanation": "The Cassandra API is used for tabular data in a column-family storage. The Gremlin API is used for graph databases. MongoDB API stores data in the Binary JSON (BSON) format. Table is used to retrieve key-value pairs.",
+    "domain": "Azure Cosmos DB APIs"
+  },
+  {
+    "question": "Which type of data structure should you use to optimize create, read, update, and delete (CRUD) operations for data saved in a multi-column tabular format?",
+    "options": [
+      "document database",
+      "graph database",
+      "Relational database",
+      "key-value database"
+    ],
+    "answer": "Relational database",
+    "explanation": "A relational database is the best option for CRUD operations and uses the least amount of storage space. A key/value store is used for simple lookups based on a single key to obtain a single value. A document database uses unstructured data such as JSON, and is optimized for retrieval, not CRUD operations. A graph database is used to store hierarchical data, such as organizational charts that have nodes and edges.",
+    "domain": "Database types"
+  },
+  {
+    "question": "Which type of data structure allows you to store data in a two-column format without requiring a complex database management system?",
+    "options": [
+      "key-value database",
+      "document database",
+      "Relational database",
+      "graph database"
+    ],
+    "answer": "key-value database",
+    "explanation": "A key-value database allows you to store data in a two-column format, where each key is unique and maps to a single value. This type of database is simple and does not require a complex database management system.",
+    "domain": "Database types"
+  },
+  {
+    "question": "Which Azure data service allows you to store document, graph, and column-family databases?",
+    "options": [
+      "Azure Cosmos DB",
+      "Azure SQL Database",
+      "Azure Table Storage",
+      "Azure Blob Storage"
+    ],
+    "answer": "Azure Cosmos DB",
+    "explanation": "Azure Cosmos DB can handle all the databases needed. Azure SQL Database cannot handle column-family databases. Table storage cannot handle any of the database types. HBase cannot handle graph databases.",
+    "domain": "Azure Cosmos DB APIs"
+  },
+  {
+    "question": "You have a folder that contains documents, images, and audio files. Which type of data do you have?",
+    "options": [
+      "Structured data",
+      "Unstructured data",
+      "Semi-structured data",
+      "Binary data"
+    ],
+    "answer": "Unstructured data",
+    "explanation": "Documents, images, and audio files are examples of unstructured data because they do not have a predefined data model or structure.",
+    "domain": "Data types"
+  },
+  {
+    "question": "Which type of database should you use to store sequential data in the fastest way possible?",
+    "options": [
+      "Time-series database",
+      "Relational database",
+      "Document database",
+      "Graph database"
+    ],
+    "answer": "Time-series database",
+    "explanation": "A time-series database is optimized for storing and querying sequential data, such as sensor readings or stock prices, in the fastest way possible.",
+    "domain": "Database types"
+  },
+  {
+    "question": "You design an application that needs to store data based on the following requirements: store historical data from multiple data sources, load data on a scheduled basis, and use a denormalized star or snowflake schema. Which type of database should you use?",
+    "options": [
+      "Azure Table storage",
+      "OLTP Database",
+      "OLAP Database",
+      "Graph database"
+    ],
+    "answer": "OLAP Database",
+    "explanation": "An OLAP (Online Analytical Processing) database is designed for complex queries and analysis, making it suitable for storing historical data from multiple sources and using a denormalized star or snowflake schema.",
+    "domain": "Database types"
+  },
+  {
+    "question": "Which type of database can be used for semi-structured data that will be processed by an Apache Spark pool in Azure Synapse Analytics?",
+    "options": [
+      "column-family",
+      "graph",
+      "relational"
+    ],
+    "answer": "column-family",
+    "explanation": "Column-family databases are used to store unstructured, tabular data comprising rows and columns. Azure Synapse Analytics Spark pools do not directly support graph or relational databases.",
+    "domain": "Database types"
+  },
+  {
+    "question": "Which type of data workload is optimized for read operations and stores large amounts of aggregated data?",
+    "options": [
+      "analytical",
+      "graph",
+      "time series",
+      "transactional"
+    ],
+    "answer": "analytical",
+    "explanation": "Analytical workloads are optimized for read operations and are designed to handle large volumes of aggregated data, making them suitable for complex queries and analysis.",
+    "domain": "Data workloads"
+  },
+  {
+    "question": "Which type of data workload is optimized for updates and relies on relationships between entities to correlate data?",
+    "options": [
+      "analytical",
+      "graph",
+      "time series",
+      "transactional"
+    ],
+    "answer": "transactional",
+    "explanation": "Transactional workloads are optimized for updates and rely on relationships between entities to correlate data, making them suitable for applications that require frequent data modifications and consistency.",
+    "domain": "Data workloads"
+  },
+  {
+    "question": "What are three properties of analytical data workloads? Each correct answer presents a complete solution. Choose three.",
+    "options": [
+      "Read and write operations are optimized",
+      "Read operations are optimized",
+      "They calculate business metrics over time.",
+      "They operate on current data",
+      "They operate on historical data"
+    ],
+    "answer": [
+      "Read operations are optimized",
+      "They calculate business metrics over time",
+      "They operate on historical data"
+    ],
+    "explanation": "Analytical data workloads are optimized for read operations, calculate business metrics over time, and operate on historical data.",
+    "domain": "Data workloads"
+  },
+  {
+    "question": "Which two types of applications are used in transactional systems? Each correct answer presents a complete solution. Choose two.",
+    "options": [
+      "line-of-business (LOB) applications",
+      "live applications",
+      "reports presenting business metrics",
+      "reports presenting OLAP measures"
+    ],
+    "answer": [
+      "line-of-business (LOB) applications",
+      "live applications"
+    ],
+    "explanation": "Transactional systems typically use line-of-business (LOB) applications and live applications to manage and process transactions efficiently.",
+    "domain": "Transactional systems"
+  },
+  {
+    "question": "Which job role is responsible for designing database solutions, creating databases, and developing stored procedures?",
+    "options": [
+      "Database Administrator",
+      "Database Engineer",
+      "Database Analyst",
+      "Database User"
+    ],
+    "answer": "Database Engineer",
+    "explanation": "Database engineers create databases. Database analysts use data from a database to make business decisions. Database users use a database. Database administrators maintain existing databases.",
+    "domain": "Database roles and responsibilities"
+  },
+  {
+    "question": "Which job role is responsible for creating reports from a database and using OLAP cubes?",
+    "options": [
+      "Database Administrator",
+      "Database Engineer",
+      "Database Analyst",
+      "Database User"
+    ],
+    "answer": "Database Analyst",
+    "explanation": "Database analysts create reports from a database and use OLAP cubes to analyze data.",
+    "domain": "Database roles and responsibilities"
+  },
+  {
+    "question": "Which job role is responsible for managing the security of the data in a database, implementing backup and recovery plans, and monitoring the performance of database solutions?",
+    "options": [
+      "Database Administrator",
+      "Database Engineer",
+      "Database Analyst",
+      "Database User"
+    ],
+    "answer": "Database Administrator",
+    "explanation": "Database administrators manage the security of the data in a database, implement backup and recovery plans, and monitor the performance of database solutions.",
+    "domain": " "
+  },
+  {
+    "question": "Which job role is responsible for building data models and finding hidden data patterns?",
+    "options": [
+      "Data administrator",
+      "Database Engineer",
+      "Database Analyst",
+      "Database User"
+    ],
+    "answer": "Database Analyst",
+    "explanation": "Database analysts build data models and find hidden data patterns to support business decision-making.",
+    "domain": "Database roles and responsibilities"
+  },
+  {
+    "question": "Which two keys are needed to create a one-to-many relationship between two tables in a relational database? Each correct answer presents part of the solution. Choose two.",
+    "options": [
+      "Primary key",
+      "Foreign key",
+      "Composite key",
+      "Unique key"
+    ],
+    "answer": [
+      "Primary key",
+      "Foreign key"
+    ],
+    "explanation": "To create a one-to-many relationship between two tables in a relational database, you need a primary key in the parent table and a foreign key in the child table.",
+    "domain": "Database relationships"
+  },
+  {
+    "question": "Select the answer that correctly completes the sentence.\n\n[Answer choice] is a process to reduce duplicate data in a database and ensure data integrity.",
+    "options": [
+      "Indexing",
+      "Normalization",
+      "Projecting",
+      "Refactoring"
+    ],
+    "answer": "Normalization",
+    "explanation": "Normalization is a process to reduce duplicate data in a database and ensure data integrity.",
+    "domain": "Database design principles"
+  },
+  {
+    "question": "You have a complex query that selects data from multiple tables.\n\nWhich three database objects should allow you to reuse the query definition? Each correct answer presents a complete solution.",
+    "options": [
+      "View",
+      "Stored Procedure",
+      "Function",
+      "Trigger"
+    ],
+    "answer": [
+      "View",
+      "Stored Procedure",
+      "Function"
+    ],
+    "explanation": "Views, stored procedures, and functions allow you to reuse query definitions in a database.",
+    "domain": "Database objects"
+  },
+  {
+    "question": "In a relational database, what can you use to create a virtual table from the results of a SELECT statement?",
+    "options": [
+      "View",
+      "Stored Procedure",
+      "Function",
+      "Trigger"
+    ],
+    "answer": "View",
+    "explanation": "A view is a virtual table in a relational database that is created from the results of a SELECT statement.",
+    "domain": "Database objects"
+  },
+  {
+    "question": "Which Azure data service provides a fully managed relational database with close to 100 percent feature parity with Microsoft SQL Server?",
+    "options": [
+      "Azure SQL Database",
+      "Azure SQL Managed Instance",
+      "Azure Synapse Analytics",
+      "SQL Server on Azure Virtual Machines"
+    ],
+    "answer": "Azure SQL Managed Instance",
+    "explanation": "Azure SQL Managed Instance is a fully managed relational database service with close to 100 percent feature parity with Microsoft SQL Server.",
+    "domain": "Database services"
+  },
+  {
+    "question": "Which three open-source databases are available as platform as a service (PaaS) in Azure? Each correct answer presents a complete solution. Choose three.",
+    "options": [
+      "PostgreSQL",
+      "MySQL",
+      "MariaDB",
+      "CouchDB",
+      "CockroachDB"
+    ],
+    "answer": [
+      "PostgreSQL",
+      "MySQL",
+      "MariaDB"
+    ],
+    "explanation": "Azure Database for MariaDB is a PaaS service. Azure Database for MySQL is a PaaS service. Azure Database for PostgreSQL is a PaaS service. You can use CockroachDB and CouchDB on a virtual machine.",
+    "domain": "Database services"
+  },
+  {
+    "question": "Which data service allows you to control the amount of RAM, change the I/O subsystem configuration, and add or remove CPUs?",
+    "options": [
+      "Azure SQL Database",
+      "Azure SQL Managed Instance",
+      "SQL Server on Azure Virtual Machines",
+      "Azure Synapse Analytics"
+    ],
+    "answer": "SQL Server on Azure Virtual Machines",
+    "explanation": "SQL Server on Azure Virtual Machines allows you the control to manage the system. Azure SQL Database and SQL Managed Instance are fully automated in terms of updates, backups, and recovery. Azure Synapse Analytics is a data warehouse solution and does not allow you to control the underlying hardware resources.",
+    "domain": "Database services"
+  },
+  {
+    "question": "Which open-source database is a hybrid relational-object database?",
+    "options": [
+      "PostgreSQL",
+      "MySQL",
+      "MariaDB",
+      "CouchDB",
+      "CockroachDB"
+    ],
+    "answer": "PostgreSQL",
+    "explanation": "PostgreSQL is a hybrid relational-object database, supporting both relational and object-oriented features.",
+    "domain": "Database services"
+  },
+  {
+    "question": "Which open-source database has built-in support for temporal data?",
+    "options": [
+      "MariaDB",
+      "MySQL",
+      "PostgreSQL",
+      "Oracle Database"
+    ],
+    "answer": "MariaDB",
+    "explanation": "MariaDB has built-in support for temporal data, allowing you to work with time-based data effectively.",
+    "domain": "Database services"
+  },
+  {
+    "question": "Which SQL engine is optimized for IoT scenarios?",
+    "options": [
+      "Azure SQL Edge",
+      "Azure SQL Database",
+      "Azure SQL Managed Instance",
+      "SQL Server on Azure Virtual Machines"
+    ],
+    "answer": "Azure SQL Edge",
+    "explanation": "SQL Edge is optimized for IoT scenarios that must work with streaming time series data. SQL Server on Azure Virtual Machinesis is best used when you want to retain control over the server and database configuration. SQL Managed Instance is ideal for cloud migrations where you need minimal change to existing apps. Azure SQL Database is best used for new cloud solutions.",
+    "domain": "Database services"
+  },
+  {
+    "question": "Which authentication methods are supported by Azure SQL Database?",
+    "options": [
+      "certificate authentication and Microsoft Entra authentication only",
+      "certificate authentication and SQL authentication only",
+      "certificate authentication, Microsoft Entra authentication, and SQL authentication",
+      "Microsoft Entra authentication and SQL authentication only"
+    ],
+    "answer": "Microsoft Entra authentication and SQL authentication only",
+    "explanation": "Azure SQL Database supports SQL authentication and Microsoft Entra authentication to control access to databases. Microsoft Entra authentication enables centralized identity management, while SQL authentication uses database-specific credentials. Certificate-based authentication is not supported for Azure SQL Database connections. Therefore, Microsoft Entra and SQL authentication is the correct answer.",
+    "domain": "Database services"
+  },
+  {
+    "question": "Which service is built on Apache Spark and is compatible with other cloud providers?",
+    "options": [
+      "Azure Synapse Analytics",
+      "Databricks",
+      "HDInsight",
+      "Azure Data Lake"
+    ],
+    "answer": "Databricks",
+    "explanation": "Databricks is built on Apache Spark and is compatible with other cloud providers, allowing for scalable data processing and analytics.",
+    "domain": "Data analytics"
+  },
+  {
+    "question": "Which data integration service allows you to orchestrate data flow without coding?",
+    "options": [
+      "Azure Data Factory",
+      "Databricks",
+      "HDInsight",
+      "Azure Synapse Analytics"
+    ],
+    "answer": "Azure Data Factory",
+    "explanation": "Azure Data Factory is a cloud-based data integration service that allows you to create, schedule, and orchestrate data workflows without writing code.Data Lake is a storage repository. Databricks and HDInsight run data processing tasks.",
+    "domain": "Data integration"
+  },
+  {
+    "question": "Which two services allow you to create a pipeline to process data in response to an event? Each correct answer presents a complete solution. Choose two.",
+    "options": [
+      "Azure Data Factory",
+      "Databricks",
+      "HDInsight",
+      "Azure Synapse Analytics"
+    ],
+    "answer": "Azure Data Factory, Azure Synapse Analytics",
+    "explanation": "Azure Synapse Analytics and Data Factory both allow you to create a pipeline in response to an event. Databricks and HDInsight run data processing tasks.",
+    "domain": "Data integration"
+  },
+  {
+    "question": "You have an Azure Cosmos DB service running the SQL API. One of the operational databases has a lot of transactions.\n\nWhich service allows you to perform near real-time analytics on the operational data stored in Azure Cosmos DB?",
+    "options": [
+      "Azure Synapse",
+      "Azure Databricks",
+      "Azure HDInsight",
+      "Azure Databricks"
+    ],
+    "answer": "Azure Synapse Link for Cosmos DB",
+    "explanation": "Azure Synapse allows you to perform near real-time analytics on operational data. Databricks and HDInsight do not meet all the requirements. Data Lake Storage is a category of analytical data store.",
+    "domain": "Data analytics"
+  },
+  {
+    "question": "What is a characteristic of batch processing?",
+    "options": [
+        "Small datasets are handled based on a time window.",
+        "Complex analysis can be performed.",
+        "Individual events are processed.",
+        "Latency is measured in seconds or milliseconds."
+    ],
+    "answer": "Complex analysis can be performed.",
+    "explanation": "Batch processing is used to execute complex analysis. Batch processing handles a large amount of data at a time. Batch processing is usually measured in minutes and hours. Stream processing is used to process individual events with low latency.",
+    "domain": "Data processing methods"
+  },
+  {
+    "question": "Which three services can be used to ingest data for stream processing? Each correct answer presents a complete solution. Choose three.",
+    "options": [
+      "Azure Data Lake Storage",
+      "Azure Event Hubs",
+      "Azure IoT Hub",
+      "Azure Functions",
+      "Azure SQL Database"
+    ],
+    "answer": "Azure Event Hubs, Azure IoT Hub, Azure Data Lake Storage",
+    "explanation": "Data Lake Storage, Event Hubs, and IoT Hub are sources commonly used to ingest data for stream processing. Azure SQL Database and Azure Function are outputs.",
+    "domain": "Data processing methods"
+  },
+  {
+    "question": "You are processing data by using batches and streams.\n\nWhat should you use to ensure that transactional consistency is enforced during the processing?",
+    "options": [
+        "Azure Blob storage",
+        "Azure Data Lake Storage",
+        "Azure SQL Database",
+        "Azure Table Storage"
+    ],
+    "answer": "Azure Delta Lake Storage",
+    "explanation": "Azure Delta Lake Storage ensures transactional consistency during batch and stream processing.",
+    "domain": "Data processing methods"
+  },
+  {
+    "question": "You need to ingest, transform, and visualize data from a continuously generated data source. The solution must minimize latency and administrative effort.\n\nWhich type of data processing should you use?",
+    "options": [
+      "Stream processing",
+      "Batch processing",
+      "Hybrid processing",
+      "Real-time processing"
+    ],
+    "answer": "Stream processing",
+    "explanation": "Stream processing allows you to ingest, transform, and visualize data from continuously generated data sources with minimal latency and administrative effort.",
+    "domain": "Data processing methods"
+  },
+  {
+    "question": "Which data model element represents the entities by which you want to aggregate measures in Microsoft Power BI?",
+    "options": [
+      "Dimensions",
+      "Measures",
+      "Tables",
+      "Relationships"
+    ],
+    "answer": "Dimensions",
+    "explanation": "In Microsoft Power BI, dimensions represent the entities by which you want to aggregate measures. Measures are the numerical values you want to analyze, and tables and relationships help organize and connect the data.",
+    "domain": "Data modeling"
+  },
+  {
+    "question": "Which Azure Blob storage access tier should you use for data that will be used once per year and can have an access time that takes more than an hour?",
+    "options": [
+      "Hot",
+      "Cool",
+      "Archive"
+    ],
+    "answer": "Archive",
+    "explanation": "The Archive access tier is suitable for data that is rarely accessed and can tolerate longer retrieval times, such as data that is used once per year.",
+    "domain": "Data storage"
+  },
+  {
+    "question": "Which storage solution should you use to store unstructured documents, graph databases, and key/value pairs?",
+    "options": [
+      "Azure Blob Storage",
+      "Azure Cosmos DB",
+      "Azure SQL Database",
+      "Azure Table Storage"
+    ],
+    "answer": "Azure Cosmos DB",
+    "explanation": "Azure Cosmos DB is a globally distributed, multi-model database service that supports document, graph, key/value, and column-family data models.",
+    "domain": "Data storage"
+  },
+  {
+    "question": "Which Azure Cosmos DB API should you use for data in the BSON format?",
+    "options": [
+      "MongoDB API",
+      "Cassandra API",
+      "Gremlin API",
+      "Table API"
+    ],
+    "answer": "MongoDB API",
+    "explanation": "The MongoDB API in Azure Cosmos DB allows you to work with data in the BSON format, which is the binary representation of JSON used by MongoDB.The Table API is used for key/value pairs. The Cassandra API is used for tabular data in a column-family storage. The Gremlin API is used for graph databases.",
+    "domain": "Data storage"
+  },
+  {
+    "question": "Which storage solution allows you to aggregate data stored in JSON files for use in analytical reports without additional development effort?",
+    "options": [
+      "Azure Blob Storage",
+      "Azure Data Lake Storage",
+      "Azure SQL Database",
+      "Azure Cosmos DB"
+    ],
+    "answer": "Azure Cosmos DB",
+    "explanation": "Azure Cosmos DB allows you to aggregate data in analytical reports without additional development. Azure SQL Database does not store data in JSON files. Blob storage and Data Lake Storage do not allow you to aggregate data for analytical reports without additional development effort.",
+    "domain": "Data storage"
+  },
+  {
+    "question": "Which Azure Cosmos DB API allows you to work with vertices and edges?",
+    "options": [
+      "MongoDB API",
+      "Apache Cassandra API",
+      "Apache Gremlin API",
+      "Table API"
+    ],
+    "answer": "Apache Gremlin API",
+    "explanation": "The Apache Gremlin API in Azure Cosmos DB allows you to work with vertices and edges, which are used in graph databases. The MongoDB API is used for BSON data, the Apache Cassandra API is used for tabular data in a column-family storage, and the Table API is used for key/value pairs.",
+    "domain": "Data storage"
+  
   }
 ]

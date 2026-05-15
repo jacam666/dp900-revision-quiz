@@ -83,6 +83,34 @@ function categorizeQuestion(question: Question): string {
   return "Core data concepts";
 }
 
+function getCorrectAnswers(question: Question): string[] {
+  const normalizedAnswer = question.answer.trim();
+
+  if (question.options.includes(normalizedAnswer)) {
+    return [normalizedAnswer];
+  }
+
+  const splitAnswers = normalizedAnswer
+    .split(",")
+    .map((item) => item.trim())
+    .filter(Boolean);
+
+  if (splitAnswers.length > 1 && splitAnswers.every((item) => question.options.includes(item))) {
+    return splitAnswers;
+  }
+
+  return [normalizedAnswer];
+}
+
+function areAnswerSetsEqual(selected: string[], correct: string[]): boolean {
+  if (selected.length !== correct.length) {
+    return false;
+  }
+
+  const selectedSet = new Set(selected);
+  return correct.every((item) => selectedSet.has(item));
+}
+
 export default function Home() {
   const allQuestions = questionsData as Question[];
   const initialSessionSize = Math.min(DEFAULT_SESSION_SIZE, allQuestions.length);
@@ -91,7 +119,8 @@ export default function Home() {
   const [hasStarted, setHasStarted] = useState(false);
   const [mode, setMode] = useState<QuizMode>("normal");
   const [index, setIndex] = useState(0);
-  const [selected, setSelected] = useState<string | null>(null);
+  const [selectedChoices, setSelectedChoices] = useState<string[]>([]);
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [score, setScore] = useState(0);
   const [isFinished, setIsFinished] = useState(false);
   const [reviewQueueIds, setReviewQueueIds] = useState<string[]>([]);
@@ -131,6 +160,8 @@ export default function Home() {
   const reviewCurrent = mode === "review" ? questionMap.get(reviewQueueIds[0]) : undefined;
 
   const current = reviewCurrent ?? quiz[index];
+  const correctAnswers = current ? getCorrectAnswers(current) : [];
+  const isMultiSelectQuestion = correctAnswers.length > 1;
 
   const weakCategoryStats = useMemo(() => {
     const counts = new Map<string, number>();
@@ -167,19 +198,35 @@ export default function Home() {
   }, [index, mode, quiz.length, reviewInitialCount, reviewMasteredCount]);
 
   const handleSelect = (choice: string) => {
-    if (!current || selected) {
+    if (!current || isSubmitted) {
       return;
     }
 
-    setSelected(choice);
+    if (isMultiSelectQuestion) {
+      setSelectedChoices((previous) => (previous.includes(choice)
+        ? previous.filter((item) => item !== choice)
+        : [...previous, choice]));
+      return;
+    }
+
+    setSelectedChoices([choice]);
   };
 
   const handleNext = () => {
-    if (!selected || !current) {
+    if (!current) {
       return;
     }
 
-    const isCorrect = selected === current.answer;
+    if (!isSubmitted) {
+      if (selectedChoices.length === 0) {
+        return;
+      }
+
+      setIsSubmitted(true);
+      return;
+    }
+
+    const isCorrect = areAnswerSetsEqual(selectedChoices, correctAnswers);
 
     if (mode === "review") {
       const currentId = current.question;
@@ -214,7 +261,8 @@ export default function Home() {
         });
       }
 
-      setSelected(null);
+      setSelectedChoices([]);
+      setIsSubmitted(false);
       return;
     }
 
@@ -234,7 +282,8 @@ export default function Home() {
     }
 
     setIndex((value) => value + 1);
-    setSelected(null);
+    setSelectedChoices([]);
+    setIsSubmitted(false);
   };
 
   const restart = (nextMode: QuizMode, nextSessionSize: number = sessionSize) => {
@@ -261,7 +310,8 @@ export default function Home() {
     }
 
     setIndex(0);
-    setSelected(null);
+    setSelectedChoices([]);
+    setIsSubmitted(false);
     setScore(0);
     setIsFinished(false);
   };
@@ -458,22 +508,28 @@ export default function Home() {
 
         <h1 className="mt-6 text-xl font-semibold leading-7 sm:text-2xl">{current.question}</h1>
 
+        {isMultiSelectQuestion ? (
+          <p className="mt-2 text-xs text-zinc-300">Select all correct answers, then click Check Answer.</p>
+        ) : null}
+
         <div className="mt-6 grid gap-3">
           {current.options.map((choice) => {
-            const isCorrect = selected && choice === current.answer;
-            const isWrong = selected === choice && choice !== current.answer;
+            const isCorrect = isSubmitted && correctAnswers.includes(choice);
+            const isWrong = isSubmitted && selectedChoices.includes(choice) && !correctAnswers.includes(choice);
+            const isSelected = selectedChoices.includes(choice);
 
             return (
               <button
                 type="button"
                 key={choice}
                 onClick={() => handleSelect(choice)}
-                disabled={Boolean(selected)}
                 className={`rounded-xl border px-4 py-3 text-left text-sm transition sm:text-base ${
                   isCorrect
                     ? "border-emerald-300 bg-emerald-300/20"
                     : isWrong
                       ? "border-rose-300 bg-rose-300/20"
+                      : isSelected
+                        ? "border-cyan-300/70 bg-cyan-300/10"
                       : "border-zinc-700 bg-zinc-800/80 hover:border-cyan-300/50"
                 }`}
               >
@@ -483,9 +539,9 @@ export default function Home() {
           })}
         </div>
 
-        {selected ? (
+        {isSubmitted ? (
           <div className="mt-6 rounded-xl border border-cyan-200/20 bg-cyan-100/10 p-4 text-sm leading-6 text-cyan-50 sm:text-base">
-            <p className="font-semibold">{selected === current.answer ? "Correct" : "Not quite"}</p>
+            <p className="font-semibold">{areAnswerSetsEqual(selectedChoices, correctAnswers) ? "Correct" : "Not quite"}</p>
             <p className="mt-2">{current.explanation}</p>
           </div>
         ) : null}
@@ -495,10 +551,10 @@ export default function Home() {
           <button
             type="button"
             onClick={handleNext}
-            disabled={!selected}
+            disabled={selectedChoices.length === 0}
             className="rounded-xl bg-cyan-400 px-5 py-2.5 font-semibold text-zinc-900 transition enabled:hover:bg-cyan-300 disabled:cursor-not-allowed disabled:opacity-40"
           >
-            {index === quiz.length - 1 ? "Finish" : "Next"}
+            {!isSubmitted ? "Check Answer" : index === quiz.length - 1 ? "Finish" : "Next"}
           </button>
         </div>
 
