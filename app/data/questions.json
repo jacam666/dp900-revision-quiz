@@ -1953,18 +1953,6 @@
     "domain": "Database services"
   },
   {
-    "question": "Which service is built on Apache Spark and is compatible with other cloud providers?",
-    "options": [
-      "Azure Synapse Analytics",
-      "Databricks",
-      "HDInsight",
-      "Azure Data Lake"
-    ],
-    "answer": "Databricks",
-    "explanation": "Databricks is built on Apache Spark and is compatible with other cloud providers, allowing for scalable data processing and analytics.",
-    "domain": "Data analytics"
-  },
-  {
     "question": "Which data integration service allows you to orchestrate data flow without coding?",
     "options": [
       "Azure Data Factory",
@@ -2119,6 +2107,354 @@
     "answer": "Apache Gremlin API",
     "explanation": "The Apache Gremlin API in Azure Cosmos DB allows you to work with vertices and edges, which are used in graph databases. The MongoDB API is used for BSON data, the Apache Cassandra API is used for tabular data in a column-family storage, and the Table API is used for key/value pairs.",
     "domain": "Data storage"
-  
-  }
+  },
+  {
+    "question": "You have data stored in two tables in a database.\n\nYou create a relationship between the tables.\n\nWhich type of data do you have?",
+    "options": [
+      "Non-relational data",
+      "Structured data",
+      "Unstructured data"
+    ],
+    "answer": "Structured data",
+    "explanation": "When you have data stored in tables and create relationships between them, you are working with structured data. Structured data is organized into tables with rows and columns, and relationships define how the data in one table relates to the data in another table.",
+    "domain": "Data modeling"
+  },
+  {
+    "question": "You have data that describes products and is stored in JSON documents. The product structure changes over time as new attributes are added.\n\nWhich type of data do you have?",
+    "options": [
+      "Structured data",
+      "Semi-structured data",
+      "Unstructured data"
+    ],
+    "answer": "Semi-structured data",
+    "explanation": "When you have data stored in JSON documents and the structure changes over time as new attributes are added, you are working with semi-structured data. Semi-structured data does not have a fixed schema, allowing for flexibility in the data structure.",
+    "domain": "Data modeling"
+  },
+  {
+    "question": "Which type of data should be sent from video cameras in a native binary format?",
+    "options": [
+      "Structured data",
+      "Semi-structured data",
+      "Unstructured data"
+    ],
+    "answer": "Unstructured data",
+    "explanation": "Data from video cameras in a native binary format is considered unstructured data because it does not have a predefined schema or structure.",
+    "domain": "Data modeling"
+  },
+  {
+    "question": "Which two types of file store data in columnar format? Each correct answer presents a complete solution. Choose two.",
+    "options": [
+      "Parquet",
+      "ORC",
+      "Avro",
+      "JSON"
+    ],
+    "answer": "Parquet, ORC",
+    "explanation": "Parquet and ORC are columnar storage file formats, which store data in columns rather than rows. Avro and JSON are row-based storage formats.",
+    "domain": "Data storage formats"
+  },
+  {
+    "question": "Which Azure SQL Database feature ensures that users can see only their own rows when multiple customers share the same tables?",
+    "options": [
+      "Row-level security",
+      "Column-level security",
+      "Dynamic data masking",
+      "Transparent data encryption"
+    ],
+    "answer": "Row-level security",
+    "explanation": "Row-level security in Azure SQL Database ensures that users can see only their own rows when multiple customers share the same tables. Column-level security restricts access to specific columns, dynamic data masking hides sensitive data, and transparent data encryption encrypts the database.",
+    "domain": "Data security"
+  },
+  {
+    "question": "Which two attributes are characteristics of a transactional data workload? Each correct answer presents a complete solution. Choose two.",
+    "options": [
+      "highly denormalized",
+      "highly normalized",
+      "optimized for create, read, update, and delete (CRUD) operations",
+      "optimized for read operations"
+    ],
+    "answer": "highly normalized, optimized for create, read, update, and delete (CRUD) operations",
+    "explanation": "Transactional data workloads are characterized by highly normalized data structures and are optimized for create, read, update, and delete (CRUD) operations. They are designed to handle a large number of short-lived transactions efficiently.",
+    "domain": "Data modeling"
+  },
+  {
+    "question": "Which job role is responsible for managing data privacy, monitoring data stores, and monitoring data pipelines?",
+    "options": [
+      "Data Engineer",
+      "Data Analyst",
+      "Data administrator",
+      "Database user"
+    ],
+    "answer": "Data Engineer",
+    "explanation": "Data engineers are responsible for managing data privacy, monitoring data stores, and monitoring data pipelines to ensure the efficient and secure handling of data.",
+    "domain": "Data management roles and responsibilities"
+  },
+  {
+    "question": "What should you use to create and run data ingestion pipelines?",
+    "options": [
+      "Azure Data Factory",
+      "Azure Databricks",
+      "Azure Synapse Analytics",
+      "Azure Stream Analytics"
+    ],
+    "answer": "Azure Data Factory",
+    "explanation": "Azure Data Factory is a cloud-based data integration service that allows you to create, schedule, and orchestrate data ingestion pipelines. It is designed for ETL (extract, transform, load) processes and data movement between various data stores.",
+    "domain": "Data integration services"
+  },
+  {
+    "question": "What is a characteristic of stream processing?",
+    "options": [
+      "All the data in a dataset is processed",
+      "Latency is measured in seconds or milliseconds",
+      "Large datasets can be handled",
+      "Complex analysis can be performed"
+    ],
+    "answer": "Latency is measured in seconds or milliseconds",
+    "explanation": "Stream processing is characterized by low-latency processing of data in real-time or near real-time. It allows for the continuous processing of data as it arrives, enabling timely insights and actions.",
+    "domain": "Data processing methods"
+  },
+  {
+    "question": "Which service allows you to aggregate data over a specific time window before the data is written to a data lake?",
+    "options": [
+      "Azure Stream Analytics",
+      "Azure Data Factory",
+      "Azure Databricks",
+      "Azure Synapse Analytics"
+    ],
+    "answer": "Azure Stream Analytics",
+    "explanation": "Azure Stream Analytics allows you to aggregate data over a specific time window before the data is written to a data lake. It is designed for real-time analytics and can process data streams from various sources.",
+    "domain": "Data processing methods"
+  },
+  {
+    "question": "What are two advantages of using normalization over not using normalization in a relational database? Each correct answer presents a complete solution. Choose two.",
+    "options": [
+      "optimizes for complex reads",
+      "provides storage for non-structured data",
+      "optimizes for updates",
+      "uses less storage space"
+    ],
+    "answer": "optimizes for updates, uses less storage space",
+    "explanation": "Normalization in a relational database helps to reduce data redundancy and improve data integrity. It optimizes for updates by minimizing the amount of duplicate data that needs to be updated and uses less storage space by eliminating redundant data.",
+    "domain": "Data modeling"
+  },
+  {
+    "question": "Which SQL clause can be used to copy all the rows from one table to a new table?",
+    "options": [
+      "INSERT - VALUES",
+      "SELECT - HAVING",
+      "SELECT - INTO",
+      "SELECT - OVER"
+    ],
+    "answer": "SELECT - INTO",
+    "explanation": "SELECT - INTO does an insert into a table. SELECT - OVER determines the partitioning and ordering of the rowset before a windowing function is applied. INSERT - VALUES inserts values into a single row. SELECT - HAVING filters data.",
+    "domain": "SQL queries"
+  },
+  {
+    "question": "Which two DML statements are used to modify the existing data in a table? Each correct answer presents a complete solution. Choose two.",
+    "options": [
+      "INSERT",
+      "UPDATE",
+      "MERGE",
+      "SELECT"
+    ],
+    "answer": "MERGE , UPDATE",
+    "explanation": "UPDATE and MERGE modify the existing data in a table. SELECT and INSERT do not affect the existing data in a table. SELECT is used to query data, and INSERT is used to add new rows to a table.",
+    "domain": "SQL queries"
+  },
+  {
+      "question": "You need to recommend a solution that meets the following requirements:\n\nEncapsulates a business logic that can rename the products in a database\nAdds entries to tables\nWhat should you include in the recommendation?\n\nEach correct answer presents part of the solution. Choose two.",
+    "options": [
+      "a stored procedure",
+      "a table-valued function",
+      "a view",
+      "an inline function"
+    ],
+    "answer": "a stored procedure",
+    "explanation": "A stored procedure can encapsulate any type of business logic that can be reused in the application. A stored procedure can modify existing data as well as add new entries to tables. A stored procedure can be run from an application as well as from the server. An inline function cannot be used to complete the task because it cannot modify nor create objects. It can be used to query a database. A view cannot be used to complete the task because it cannot modify nor create objects. It can be used to query a database. A table-valued function cannot be used to complete the task because it cannot modify or create objects. It can be used to query a database",
+    "domain": "Database objects"
+  },
+  {
+    "question": "Which service is managed and serverless, avoids the use of Windows Server licenses, and allows for each workload to have its own instance of the service being used?",
+    "options": [
+      "Azure SQL Database",
+      "Azure SQL Managed Instance",
+      "SQL Server on Azure Virtual Machines running Linux",
+      "SQL Server on Azure Virtual Machines running Windows Server"
+    ],
+    "answer": "Azure SQL Database",
+    "explanation": "Azure SQL Database is a serverless platform as a service (PaaS) SQL instance. It is fully managed and does not require Windows Server licenses. Each workload can have its own instance of Azure SQL Database, providing isolation and scalability. Azure SQL Managed Instance is also a PaaS offering but is designed for cloud migrations with minimal changes to existing applications. SQL Server on Azure Virtual Machines running Linux or Windows Server requires managing the underlying infrastructure and may involve additional licensing costs.",
+    "domain": "Database services"
+  },
+  {
+    "question": "Which data service provides a fully managed relational database with close to 100 percent feature parity with Microsoft SQL Server?",
+    "options": [
+      "Azure SQL Database",
+      "Azure SQL Managed Instance",
+      "SQL Server on Azure Virtual Machines running Linux",
+      "SQL Server on Azure Virtual Machines running Windows Server"
+    ],
+    "answer": "Azure SQL Managed Instance",
+    "explanation": "Azure SQL Managed Instance provides a fully managed relational database with close to 100 percent feature parity with Microsoft SQL Server. It is designed for cloud migrations with minimal changes to existing applications. Azure SQL Database is a serverless PaaS offering but does not provide full feature parity with SQL Server. SQL Server on Azure Virtual Machines running Linux or Windows Server requires managing the underlying infrastructure and may involve additional licensing costs.",
+    "domain": "Database services"
+  },
+  {
+    "question": "Which data service allows you to create a single database that can scale up and down without downtime?",
+    "options": [
+      "Azure SQL Database",
+      "Azure SQL Managed Instance",
+      "SQL Server on Azure Virtual Machines running Linux",
+      "SQL Server on Azure Virtual Machines running Windows Server"
+    ],
+    "answer": "Azure SQL Database",
+    "explanation": "Azure SQL Database is a fully managed relational database that allows you to create a single database that can scale up and down without downtime. It is designed for cloud-native applications and provides high availability, automated backups, and built-in security features.",
+    "domain": "Database services"
+  },
+  {
+    "question": "Which type of Azure Storage is used to store key/value pairs grouped in partitions?",
+    "options": [
+      "Azure Blob Storage",
+      "Azure Table Storage",
+      "Azure Queue Storage",
+      "Azure File Storage"
+    ],
+    "answer": "Azure Table Storage",
+    "explanation": "Azure Table Storage is a service that stores structured NoSQL data in the cloud, providing a key/attribute store with a schema-less design. It is ideal for storing large amounts of structured, non-relational data. Azure Blob Storage is used for storing unstructured data, Azure Queue Storage is used for message queuing, and Azure File Storage is used for file shares.",
+    "domain": "Storage services"
+  },
+  {
+    "question": "What are two characteristics of Azure Table storage? Each correct answer presents a complete solution. Choose two.",
+    "options": [
+      "Each RowKey value is unique within a table",
+      "Each RowKey value is unique within a table partition",
+      "Items in the same partition are stored in a RowKey order",
+      "Tables use indexes to speed up queries"
+    ],
+    "answer": "Each RowKey value is unique within a table partition, Items in the same partition are stored in a RowKey order",
+    "explanation": "Azure Table Storage is a NoSQL key-value store. Each RowKey value is unique within a table partition, and items in the same partition are stored in a RowKey order. Tables do not use traditional indexes to speed up queries; instead, they rely on partitioning and RowKey ordering for efficient access.",
+    "domain": "Storage services"
+  },
+  {
+    "question": "Which Azure Cosmos DB API should you use for data in key/value tables?",
+    "options": [
+      "SQL API",
+      "MongoDB API",
+      "Cassandra API",
+      "Table API"
+    ],
+    "answer": "Table API",
+    "explanation": "The Table API in Azure Cosmos DB is designed for key/value data, providing a schema-less design and scalability. It is ideal for applications that require a NoSQL key-value store.",
+    "domain": "Database services"
+  },
+  {
+    "question": "You need to process many JSON files every minute, while keeping the data from the files accessible by using native queries.\n Which Azure Cosmos DB API should you use?",
+    "options": [
+      "Apache Cassandra API",
+      "Apache Gremlin API",
+      "NoSQL",
+      "Table API"
+    ],
+    "answer": "NoSQL",
+    "explanation": "The NoSQL API in Azure Cosmos DB is designed for handling large volumes of unstructured data, such as JSON files. It allows for native querying of the data while providing scalability and performance for high-throughput scenarios.",
+    "domain": "Database services"
+  },
+  {
+    "question": "Which Azure Cosmos DB API is queried by using a syntax based on SQL?",
+    "options": [
+      "Apache Cassandra API",
+      "Apache Gremlin API",
+      "MongoDB API",
+      "Table API"
+    ],
+    "answer": "Apache Cassandra",
+    "explanation": "The Cassandra API is queried by using SQL. The MongoDB API is queried by using MongoDB Query Language (MQL). The Gremlin API is queried by using Graph. The Table API is queried by using OData and LINQ queries.",
+    "domain": "Database services"
+  },
+  {
+    "question": "",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "answer": "",
+    "explanation": ""
+  },
+  {
+    "question": "",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "answer": "",
+    "explanation": ""
+  },
+  {
+    "question": "",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "answer": "",
+    "explanation": ""
+  },
+  {
+    "question": "",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "answer": "",
+    "explanation": ""
+  },
+  {
+    "question": "",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "answer": "",
+    "explanation": ""
+  },
+  {
+    "question": "",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "answer": "",
+    "explanation": ""
+  },
+  {
+    "question": "",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "answer": "",
+    "explanation": ""
+  },
+  {
+    "question": "",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "answer": "",
+    "explanation": ""
+  },
 ]
