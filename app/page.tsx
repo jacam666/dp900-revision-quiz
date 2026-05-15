@@ -6,7 +6,7 @@ import questionsData from "@/app/data/questions.json";
 type Question = {
   question: string;
   options: string[];
-  answer: string;
+  answer: string | string[];
   explanation: string;
   domain: string;
 };
@@ -36,16 +36,24 @@ function shuffleArray<T>(items: T[], random: () => number = Math.random): T[] {
   return copy;
 }
 
+function isCompleteQuestion(q: Question): boolean {
+  const answerValid = Array.isArray(q.answer)
+    ? q.answer.length > 0
+    : typeof q.answer === "string" && q.answer.trim() !== "";
+  return q.question.trim() !== "" && q.question.trim() !== " " && answerValid;
+}
+
 function buildQuizSet(
   source: Question[],
   weakQuestionIds: string[] = [],
   random: () => number = Math.random,
   sessionSize: number = DEFAULT_SESSION_SIZE,
 ): Question[] {
+  const complete = source.filter(isCompleteQuestion);
   const weakIdSet = new Set(weakQuestionIds);
-  const weakQuestions = source.filter((item) => weakIdSet.has(item.question));
-  const randomRemainder = shuffleArray(source.filter((item) => !weakIdSet.has(item.question)), random);
-  const selected = [...weakQuestions, ...randomRemainder].slice(0, Math.min(sessionSize, source.length));
+  const weakQuestions = complete.filter((item) => weakIdSet.has(item.question));
+  const randomRemainder = shuffleArray(complete.filter((item) => !weakIdSet.has(item.question)), random);
+  const selected = [...weakQuestions, ...randomRemainder].slice(0, Math.min(sessionSize, complete.length));
 
   return selected.map((item) => ({
     ...item,
@@ -84,12 +92,28 @@ function categorizeQuestion(question: Question): string {
 }
 
 function getCorrectAnswers(question: Question): string[] {
+  // If answer is already an array, use it directly
+  if (Array.isArray(question.answer)) {
+    return question.answer;
+  }
+
   const normalizedAnswer = question.answer.trim();
 
+  // Exact single-option match
   if (question.options.includes(normalizedAnswer)) {
     return [normalizedAnswer];
   }
 
+  // Find which options appear verbatim inside the answer string.
+  // This handles answers like "Option A, Option B" even when option text
+  // itself contains commas (e.g. "optimized for create, read, update...").
+  const matchingOptions = question.options.filter((opt) => normalizedAnswer.includes(opt));
+
+  if (matchingOptions.length > 1) {
+    return matchingOptions;
+  }
+
+  // Fall back: comma-split (for simple cases with no embedded commas)
   const splitAnswers = normalizedAnswer
     .split(",")
     .map((item) => item.trim())

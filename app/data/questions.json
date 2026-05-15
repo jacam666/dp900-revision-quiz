@@ -1732,7 +1732,7 @@
     "options": [
       "Read and write operations are optimized",
       "Read operations are optimized",
-      "They calculate business metrics over time.",
+      "They calculate business metrics over time",
       "They operate on current data",
       "They operate on historical data"
     ],
@@ -1982,7 +1982,7 @@
       "Azure Synapse",
       "Azure Databricks",
       "Azure HDInsight",
-      "Azure Databricks"
+      "Azure Data Lake Storage"
     ],
     "answer": "Azure Synapse Link for Cosmos DB",
     "explanation": "Azure Synapse allows you to perform near real-time analytics on operational data. Databricks and HDInsight do not meet all the requirements. Data Lake Storage is a category of analytical data store.",
@@ -2368,93 +2368,5 @@
     "answer": "Apache Cassandra",
     "explanation": "The Cassandra API is queried by using SQL. The MongoDB API is queried by using MongoDB Query Language (MQL). The Gremlin API is queried by using Graph. The Table API is queried by using OData and LINQ queries.",
     "domain": "Database services"
-  },
-  {
-    "question": "",
-    "options": [
-      "",
-      "",
-      "",
-      ""
-    ],
-    "answer": "",
-    "explanation": ""
-  },
-  {
-    "question": "",
-    "options": [
-      "",
-      "",
-      "",
-      ""
-    ],
-    "answer": "",
-    "explanation": ""
-  },
-  {
-    "question": "",
-    "options": [
-      "",
-      "",
-      "",
-      ""
-    ],
-    "answer": "",
-    "explanation": ""
-  },
-  {
-    "question": "",
-    "options": [
-      "",
-      "",
-      "",
-      ""
-    ],
-    "answer": "",
-    "explanation": ""
-  },
-  {
-    "question": "",
-    "options": [
-      "",
-      "",
-      "",
-      ""
-    ],
-    "answer": "",
-    "explanation": ""
-  },
-  {
-    "question": "",
-    "options": [
-      "",
-      "",
-      "",
-      ""
-    ],
-    "answer": "",
-    "explanation": ""
-  },
-  {
-    "question": "",
-    "options": [
-      "",
-      "",
-      "",
-      ""
-    ],
-    "answer": "",
-    "explanation": ""
-  },
-  {
-    "question": "",
-    "options": [
-      "",
-      "",
-      "",
-      ""
-    ],
-    "answer": "",
-    "explanation": ""
   }
 ]
