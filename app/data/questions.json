@@ -660,18 +660,6 @@
     "domain": "Identify considerations for relational data on Azure"
   },
   {
-    "question": "Which metric most directly reflects quiz answer correctness in a study app?",
-    "options": [
-      "Average latency",
-      "Score percentage",
-      "CPU utilization",
-      "Network throughput"
-    ],
-    "answer": "Score percentage",
-    "explanation": "Score percentage indicates how many answers were correct out of total attempted questions.",
-    "domain": "Describe core data concepts"
-  },
-  {
     "question": "In a relational model, what does a primary key do?",
     "options": [
       "Encrypts row data",
@@ -963,9 +951,9 @@
     "question": "Which SQL statement is used to combine rows from two tables based on a related column?",
     "options": [
       "JOIN",
-      "MERGEFILE",
+      "MERGE FILE",
       "ATTACH",
-      "UNIONALLTABLE"
+      "UNION ALL TABLE"
     ],
     "answer": "JOIN",
     "explanation": "JOIN combines related data from multiple tables using matching keys.",
@@ -1977,24 +1965,12 @@
     "domain": "Data integration"
   },
   {
-    "question": "You have an Azure Cosmos DB service running the SQL API. One of the operational databases has a lot of transactions.\n\nWhich service allows you to perform near real-time analytics on the operational data stored in Azure Cosmos DB?",
-    "options": [
-      "Azure Synapse",
-      "Azure Databricks",
-      "Azure HDInsight",
-      "Azure Data Lake Storage"
-    ],
-    "answer": "Azure Synapse Link for Cosmos DB",
-    "explanation": "Azure Synapse allows you to perform near real-time analytics on operational data. Databricks and HDInsight do not meet all the requirements. Data Lake Storage is a category of analytical data store.",
-    "domain": "Data analytics"
-  },
-  {
     "question": "What is a characteristic of batch processing?",
     "options": [
-        "Small datasets are handled based on a time window.",
-        "Complex analysis can be performed.",
-        "Individual events are processed.",
-        "Latency is measured in seconds or milliseconds."
+      "Small datasets are handled based on a time window.",
+      "Complex analysis can be performed.",
+      "Individual events are processed.",
+      "Latency is measured in seconds or milliseconds."
     ],
     "answer": "Complex analysis can be performed.",
     "explanation": "Batch processing is used to execute complex analysis. Batch processing handles a large amount of data at a time. Batch processing is usually measured in minutes and hours. Stream processing is used to process individual events with low latency.",
@@ -2016,13 +1992,13 @@
   {
     "question": "You are processing data by using batches and streams.\n\nWhat should you use to ensure that transactional consistency is enforced during the processing?",
     "options": [
-        "Azure Blob storage",
-        "Azure Data Lake Storage",
-        "Azure SQL Database",
-        "Azure Table Storage"
+      "Azure Blob storage",
+      "Azure Data Lake Storage",
+      "Azure SQL Database",
+      "Azure Table Storage"
     ],
-    "answer": "Azure Delta Lake Storage",
-    "explanation": "Azure Delta Lake Storage ensures transactional consistency during batch and stream processing.",
+    "answer": "Azure Data Lake Storage",
+    "explanation": "Azure Data Lake Storage with Delta Lake format ensures transactional consistency during batch and stream processing.",
     "domain": "Data processing methods"
   },
   {
@@ -2262,7 +2238,7 @@
     "domain": "SQL queries"
   },
   {
-      "question": "You need to recommend a solution that meets the following requirements:\n\nEncapsulates a business logic that can rename the products in a database\nAdds entries to tables\nWhat should you include in the recommendation?\n\nEach correct answer presents part of the solution. Choose two.",
+    "question": "You need to recommend a solution that meets the following requirements:\n\nEncapsulates a business logic that can rename the products in a database\nAdds entries to tables\nWhat should you include in the recommendation?",
     "options": [
       "a stored procedure",
       "a table-valued function",
@@ -2283,18 +2259,6 @@
     ],
     "answer": "Azure SQL Database",
     "explanation": "Azure SQL Database is a serverless platform as a service (PaaS) SQL instance. It is fully managed and does not require Windows Server licenses. Each workload can have its own instance of Azure SQL Database, providing isolation and scalability. Azure SQL Managed Instance is also a PaaS offering but is designed for cloud migrations with minimal changes to existing applications. SQL Server on Azure Virtual Machines running Linux or Windows Server requires managing the underlying infrastructure and may involve additional licensing costs.",
-    "domain": "Database services"
-  },
-  {
-    "question": "Which data service provides a fully managed relational database with close to 100 percent feature parity with Microsoft SQL Server?",
-    "options": [
-      "Azure SQL Database",
-      "Azure SQL Managed Instance",
-      "SQL Server on Azure Virtual Machines running Linux",
-      "SQL Server on Azure Virtual Machines running Windows Server"
-    ],
-    "answer": "Azure SQL Managed Instance",
-    "explanation": "Azure SQL Managed Instance provides a fully managed relational database with close to 100 percent feature parity with Microsoft SQL Server. It is designed for cloud migrations with minimal changes to existing applications. Azure SQL Database is a serverless PaaS offering but does not provide full feature parity with SQL Server. SQL Server on Azure Virtual Machines running Linux or Windows Server requires managing the underlying infrastructure and may involve additional licensing costs.",
     "domain": "Database services"
   },
   {
@@ -2329,7 +2293,10 @@
       "Items in the same partition are stored in a RowKey order",
       "Tables use indexes to speed up queries"
     ],
-    "answer": "Each RowKey value is unique within a table partition, Items in the same partition are stored in a RowKey order",
+    "answer": [
+      "Each RowKey value is unique within a table partition",
+      "Items in the same partition are stored in a RowKey order"
+    ],
     "explanation": "Azure Table Storage is a NoSQL key-value store. Each RowKey value is unique within a table partition, and items in the same partition are stored in a RowKey order. Tables do not use traditional indexes to speed up queries; instead, they rely on partitioning and RowKey ordering for efficient access.",
     "domain": "Storage services"
   },
@@ -2365,8 +2332,116 @@
       "MongoDB API",
       "Table API"
     ],
-    "answer": "Apache Cassandra",
+    "answer": "Apache Cassandra API",
     "explanation": "The Cassandra API is queried by using SQL. The MongoDB API is queried by using MongoDB Query Language (MQL). The Gremlin API is queried by using Graph. The Table API is queried by using OData and LINQ queries.",
     "domain": "Database services"
+  },
+  {
+    "question": "Which Azure service should be used by data engineers to enforce data governance and track data lineage across enterprise data sources?",
+    "options": [
+      "Azure Data Explorer",
+      "Microsoft Purview",
+      "Azure Data Factory",
+      "Azure Stream Analytics"
+    ],
+    "answer": "Microsoft Purview",
+    "explanation": "Microsoft Purview provides governance, cataloging, and lineage capabilities for enterprise data assets.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "What is a best practice for integrating Microsoft Purview to enhance data governance?",
+    "options": [
+      "Use Microsoft Purview solely for data storage solutions.",
+      "Regularly update governance policies and data classifications.",
+      "Ignore non-compliant data sources to streamline governance efforts.",
+      "Disable lineage tracking to reduce overhead."
+    ],
+    "answer": "Regularly update governance policies and data classifications.",
+    "explanation": "Governance is most effective when policies and classifications are kept current as data and business needs change.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "In the context of enterprise-wide data governance, what specific feature does Microsoft Purview offer to help ensure data integrity?",
+    "options": [
+      "Automated data cleaning and validation processes.",
+      "Data lineage tracking across multiple sources and systems.",
+      "Real-time data synchronization across cloud services.",
+      "Built-in report rendering for business users."
+    ],
+    "answer": "Data lineage tracking across multiple sources and systems.",
+    "explanation": "Lineage helps teams understand how data moves and changes, which supports trust and integrity checks.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "Your organization needs to ensure that its data pipelines are performing optimally. Which role should be primarily involved in monitoring and managing this aspect?",
+    "options": [
+      "Database Administrator",
+      "Data Analyst",
+      "Data Engineer",
+      "Business User"
+    ],
+    "answer": "Data Engineer",
+    "explanation": "Data engineers typically build, monitor, and optimize pipelines and data movement workloads.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "A data analyst is tasked with providing insights to the business. Which activity is central to their role but less relevant to a data engineer?",
+    "options": [
+      "Designing data ingestion architectures.",
+      "Implementing data governance policies.",
+      "Creating data visualizations and reports.",
+      "Managing backup retention policies."
+    ],
+    "answer": "Creating data visualizations and reports.",
+    "explanation": "Data analysts focus on exploring data and presenting insights through reports and visualizations.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "A database administrator needs to ensure high availability and disaster recovery for a SQL Server instance. Which Azure service should they use to achieve this?",
+    "options": [
+      "Azure SQL VM",
+      "Azure SQL Managed Instance",
+      "Azure Data Factory",
+      "Azure Data Explorer"
+    ],
+    "answer": "Azure SQL Managed Instance",
+    "explanation": "Azure SQL Managed Instance provides managed SQL Server compatibility with built-in high availability and disaster recovery capabilities.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "Which role is uniquely tasked with the execution of backup and recovery strategies for database systems?",
+    "options": [
+      "Data Engineer",
+      "Data Analyst",
+      "Database Administrator",
+      "Solution Architect"
+    ],
+    "answer": "Database Administrator",
+    "explanation": "Database administrators are responsible for operational database maintenance, including backup and recovery planning.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "Your organization wants to ensure data governance and discoverability across its data assets. Which Microsoft Purview feature directly supports this goal?",
+    "options": [
+      "Centralized data cataloging and asset discovery.",
+      "In-depth machine learning model training.",
+      "Automated performance tuning for databases.",
+      "Event-driven compute scaling."
+    ],
+    "answer": "Centralized data cataloging and asset discovery.",
+    "explanation": "Microsoft Purview helps users discover and catalog data assets from a central governance platform.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "Which Azure service allows data engineers to perform real-time analytics on streaming data for immediate insights?",
+    "options": [
+      "Azure SQL Database",
+      "Azure Data Factory",
+      "Azure Stream Analytics",
+      "Azure Key Vault"
+    ],
+    "answer": "Azure Stream Analytics",
+    "explanation": "Azure Stream Analytics is designed for real-time processing and analytics over streaming event data.",
+    "domain": "Describe an analytics workload on Azure"
   }
 ]
