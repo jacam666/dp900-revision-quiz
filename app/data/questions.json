@@ -2443,5 +2443,96 @@
     "answer": "Azure Stream Analytics",
     "explanation": "Azure Stream Analytics is designed for real-time processing and analytics over streaming event data.",
     "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "Which is the best type of database to use for an organizational chart?",
+    "options": [
+      "Azure SQL Database",
+      "Azure Table storage",
+      "Document Database",
+      "Graph Database"
+    ],
+    "answer": "Graph Database",
+    "explanation": "Graph databases are optimized for storing and querying data that is interconnected, making them ideal for organizational charts and other hierarchical data structures.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "Which Azure Cosmos DB API allows you to implement a non-relational database and model nodes that have relationships between them",
+    "options": [
+      "Apache Gremlin ",
+      "Mongo DB",
+      "NoSQL",
+      "Table"
+    ],
+    "answer": "Apache Gremlin",
+    "explanation": "The Apache Gremlin API in Azure Cosmos DB allows you to implement a graph database, which is a type of non-relational database that models nodes and their relationships.",
+
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "Which feature of transactional data processing guarantees that concurrent processes cannot see data in an inconsistent state?",
+    "options": [
+      "Atomicity",
+      "Consistency",
+      "Durability",
+      "Isolation"
+    ],
+    "answer": "Isolation",
+    "explanation": "Isolation ensures concurrent transactions do not interfere with one another and prevents visibility of intermediate inconsistent states. Atomicity means a transaction is all-or-nothing, consistency means each transaction preserves valid rules and constraints, and durability means committed changes persist even after a crash.",
+    "domain": "Identify considerations for relational data on Azure"
+  },
+  {
+    "question": "In a relational database, on which type of objects should you configure a datatype?",
+    "options": [
+      "Columns",
+      "Fields",
+      "Relationships",
+      "Rows",
+      "Tables"
+    ],
+    "answer": "Columns",
+    "explanation": "Datatypes are applied to columns to enforce the type of data that can be stored. For example, an integer datatype can be applied to a column that must contain only whole numbers, such as a quantity column.",
+    "domain": "Identify considerations for relational data on Azure"
+  },
+  {
+    "question": "Which three statements accurately describe the properties of a table in a relational database? Each correct answer presents a complete solution.",
+    "options": [
+      "All columns must contain values.",
+      "A table can have a primary key built on multiple columns.",
+      "A table can have only one foreign key.",
+      "Each column must have a datatype.",
+      "Each row in a table has the same number of columns."
+    ],
+    "answer": [
+      "A table can have a primary key built on multiple columns.",
+      "Each column must have a datatype.",
+      "Each row in a table has the same number of columns."
+    ],
+    "explanation": "In a relational database, each row in a table has the same number of columns, each column has a datatype, and a primary key can be composed of multiple columns. Tables do not require every column to contain a value and can include multiple foreign keys.",
+    "domain": "Identify considerations for relational data on Azure"
+  },
+  {
+    "question": "Which type of data store uses star schemas, fact tables, and dimension tables?",
+    "options": [
+      "Data lake",
+      "Data warehouse",
+      "Cube",
+      "Relational database"
+    ],
+    "answer": "Data warehouse",
+    "explanation": "Data warehouses use fact and dimension tables in star or snowflake schemas. Relational databases are general-purpose and do not inherently use fact and dimension modeling, cubes are generated semantic structures rather than base table stores, and data lakes primarily store files.",
+    "domain": "Describe an analytics workload on Azure"
+  },
+  {
+    "question": "What should you create first for an integration process that copies data from Microsoft Excel files to Parquet files by using Azure Data Factory?",
+    "options": [
+      "A dataset",
+      "A linked service",
+      "A pipeline",
+      "An activity"
+    ],
+    "answer": "A linked service",
+    "explanation": "A linked service should be created first because it defines the connection information used by Azure Data Factory. Pipelines then orchestrate processing using those connections, datasets define input and output data structures, and activities perform the movement or transformation steps.",
+    "domain": "Describe an analytics workload on Azure"
   }
 ]
